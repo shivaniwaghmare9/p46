@@ -206,3 +206,45 @@ int main() {
        }
    }
 }
+// Online C++ compiler to run C++ program online
+///==========================find the number in array(target)r=================================
+#include <iostream>
+using namespace std;
+int main() {
+  
+        int arr[]={1,2,3,4,8};
+        int target=8;
+        for(int i=0; i<5; i++)
+        {
+            if(arr[i]==target)
+            {
+                cout<<"yes";
+                return 0;
+            }
+        }
+        cout<<"no";
+        return 0;
+}
+// Online C++ compiler to run C++ program online
+///==========================target indexing=================================
+#include <iostream>
+using namespace std;
+int main() {
+  int arr[]={1,2,3,4,6};
+  int target=10;
+  for(int i=0; i<5; i++)
+  {
+        for(int j=0; j<5; j++)
+        {
+            if(arr[i]+arr[j]==target)
+            
+            {
+                cout<<i<<"\t"<<j;
+                return 0;
+            }
+        }
+  }
+  cout<<"no";
+  return 0;
+       
+}
