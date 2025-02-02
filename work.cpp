@@ -150,3 +150,59 @@ int main() {
         cout<<arr[i]<<"\t";
     }
 }
+///=================================move zero's===============================
+#include <iostream>
+using namespace std;
+int main() {
+    int arr[]={1,0,2,0,3,0};
+   int j=0;
+   for(int i=0; i<6; i++)
+   {
+       if(arr[i]!=0)
+       {
+           int tmp;
+           tmp=arr[i];
+           arr[i]=arr[j];
+           arr[j]=tmp;
+           j++;
+           
+       }
+   }
+   for(int i=0; i<6; i++)
+   {
+       cout<<arr[i]<<"\t";
+   }
+  
+  
+}
+// Online C++ compiler to run C++ program online
+///==========================multiple missing number=================================
+#include <iostream>
+using namespace std;
+int main() {
+   int arr[]={1,5,10,15,20,25};
+   for(int i=0; i<5; i++)
+   {
+       if(arr[i+1]-arr[i]>1)
+       {
+          for(int j=arr[i]+1; j<arr[i+1]; j++)
+          {
+              cout<<j<<"\t";
+          }
+       }
+   }
+}
+// Online C++ compiler to run C++ program online
+///==========================single missing number=================================
+#include <iostream>
+using namespace std;
+int main() {
+   int arr[]={1,3,5,7,9,11};
+   for(int i=0; i<5; i++)
+   {
+       if(arr[i+1]-arr[i]>1)
+       {
+          cout<<arr[i]+1<<endl;
+       }
+   }
+}
