@@ -248,3 +248,145 @@ int main() {
   return 0;
        
 }
+// Online C++ compiler to run C++ program online
+//==============================desending array=================================
+ #include <iostream>
+using namespace std;
+int main(){
+    
+int arr[]={6,5,7,4,8,9};
+int size=sizeof(arr)/sizeof(arr[0]);
+for(int i=0; i<size; i++)
+{
+    for(int j=i+1; j<size; j++)
+    {
+        if(arr[j]>arr[i])
+        {
+            int tmp; 
+            tmp=arr[j];
+            arr[j]=arr[i];
+            arr[i]=tmp;
+        }
+    }
+}
+cout<<"\nAfter applying\n";
+for(int i=0; i<size;i++)
+{
+    cout<<arr[i]<<"\t";
+}
+
+}
+
+// Online C++ compiler to run C++ program online
+//==============================asending array=================================
+ #include <iostream>
+using namespace std;
+int main(){
+    
+int arr[]={6,5,7,4,8,9};
+int size=sizeof(arr)/sizeof(arr[0]);
+for(int i=0; i<size; i++)
+{
+    for(int j=i+1; j<size; j++)
+    {
+        if(arr[j]<arr[i])
+        {
+            int tmp; 
+            tmp=arr[j];
+            arr[j]=arr[i];
+            arr[i]=tmp;
+        }
+    }
+}
+cout<<"\nAfter applying\n";
+for(int i=0; i<size;i++)
+{
+    cout<<arr[i]<<"\t";
+}
+
+}
+
+// Online C++ compiler to run C++ program online
+//==============================2nd largest element=================================
+ #include <iostream>
+using namespace std;
+int main(){
+    
+int arr[]={6,5,7,4,8,9};
+int size=sizeof(arr)/sizeof(arr[0]);
+for(int i=0; i<2; i++)
+{
+    for(int j=i+1; j<size; j++)
+    {
+        if(arr[j]>arr[i])
+        {
+            int tmp; 
+            tmp=arr[j];
+            arr[j]=arr[i];
+            arr[i]=tmp;
+        }
+    }
+}
+
+    cout<<arr[1];
+
+
+}
+
+// Online C++ compiler to run C++ program online
+//==============================2nd smallest element=================================
+ #include <iostream>
+using namespace std;
+int main(){
+    
+int arr[]={6,5,7,4,8,9};
+int size=sizeof(arr)/sizeof(arr[0]);
+for(int i=0; i<2; i++)
+{
+    for(int j=i+1; j<size; j++)
+    {
+        if(arr[j]<arr[i])
+        {
+            int tmp; 
+            tmp=arr[j];
+            arr[j]=arr[i];
+            arr[i]=tmp;
+        }
+    }
+}
+
+    cout<<arr[1];
+
+
+}
+
+// Online C++ compiler to run C++ program online
+//==============================kth smallest/largest element=================================
+ #include <iostream>
+using namespace std;
+int main(){
+    
+int arr[]={6,5,7,4,8,9};
+int k;
+cout<<"enter kth element"<<endl;
+cin>>k;
+int size=sizeof(arr)/sizeof(arr[0]);
+for(int i=0; i<k; i++)
+{
+    for(int j=i+1; j<size; j++)
+    {
+        if(arr[j]>arr[i])
+        {
+            int tmp; 
+            tmp=arr[j];
+            arr[j]=arr[i];
+            arr[i]=tmp;
+        }
+    }
+}
+
+    cout<<arr[k-1];
+
+
+}
+
