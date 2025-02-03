@@ -500,3 +500,27 @@ int main() {
      return 0;
    
 }
+// Online C++ compiler to run C++ program online
+//============find the majority element in array=====================================
+#include <iostream>
+using namespace std;
+int main() {
+   int arr[]={1,2,2,2,2,3,3,3,4,4};
+   int size=sizeof(arr)/sizeof(arr[0]);
+   int majority=0;
+   int maxcount=0;
+   for(int i=0; i<size; i++){
+       int count=0;
+       for(int j=0; j<size; j++){
+           if(arr[i]=arr[j]){
+               count++;
+           }
+       }
+       if(count>maxcount){
+           maxcount=count;
+           majority=arr[i];
+       }
+   }
+   cout<<"majority element:"<<majority;
+   return 0;
+}
