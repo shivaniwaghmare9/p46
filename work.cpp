@@ -437,7 +437,7 @@ int main() {
    }
 }
 // Online C++ compiler to run C++ program online
-//============================zero counting in array
+//============================zero counting in array==========================================
 #include <iostream>
 using namespace std;
 int main() {
@@ -452,4 +452,51 @@ int main() {
    }
      cout<<"zero in array"<<"\t"<<count;    
      return 0;
+}
+// Online C++ compiler to run C++ program online
+//============================revers array================================
+#include <iostream>
+using namespace std;
+int main() {
+   int arr[]={6,4,7,8,3,2};
+   int size=sizeof(arr)/sizeof(arr[0]);
+   int start=0;
+   int end=5;
+   for(int i=0; i<size; i++){
+       cout<<arr[i]<<"\t";
+   }
+   while(start<end){
+       int tmp;
+       tmp=arr[start];
+       arr[start]=arr[end];
+       arr[end]=tmp;
+       start++;
+       end--;
+   }
+   cout<<"\nafter\n";
+   for(int i=0; i<size; i++){
+       cout<<arr[i]<<"\t";
+   }
+   
+      
+      
+   
+}
+// Online C++ compiler to run C++ program online
+//============================palindrome array========================================
+#include <iostream>
+using namespace std;
+int main() {
+   int arr[]={6,3,4,4,3,6};
+   int size=sizeof(arr)/sizeof(arr[0]);
+ for(int i=0; i<size/2; i++){
+     if(arr[i]!=arr[size-i-1]){
+         cout<<"not a palin";
+         return 0;
+     }
+ }
+      
+     cout<<"palin";
+     return 0;
+   
 }
