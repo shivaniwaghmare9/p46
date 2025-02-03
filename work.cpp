@@ -414,7 +414,7 @@ int main() {
    }
 }
 // Online C++ compiler to run C++ program online
-//============================desending array is sort=====================================
+//============================desending array is sort======================================
 #include <iostream>
 using namespace std;
 int main() {
@@ -435,4 +435,21 @@ int main() {
        cout<<"array is not a sort";
        return 0;
    }
+}
+// Online C++ compiler to run C++ program online
+//============================zero counting in array
+#include <iostream>
+using namespace std;
+int main() {
+   int arr[]={0,2,0,0,0,0,3};
+   int size=sizeof(arr)/sizeof(arr[0]);
+   int count=0;
+  
+   for(int i=0; i<size-1; i++){
+       if(arr[i]==0){
+           count++;
+       }
+   }
+     cout<<"zero in array"<<"\t"<<count;    
+     return 0;
 }
