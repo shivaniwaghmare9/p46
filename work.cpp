@@ -524,3 +524,302 @@ int main() {
    cout<<"majority element:"<<majority;
    return 0;
 }
+// Online C++ compiler to run C++ program online
+//==============================desending array===================
+#include <iostream>
+using namespace std;
+int main() {
+   int arr[]={7,4,9,3,8,2,1};
+   int size=sizeof(arr)/sizeof(arr[0]);
+   
+   for(int i=0; i<size; i++){
+       for(int j=i+1; j<size; j++){
+           if(arr[j]>arr[i]){
+               int tmp;
+               tmp=arr[j];
+               arr[j]=arr[i];
+               arr[i]=tmp;
+           }
+       }
+        
+   }
+   cout<<"\nafter applying\n";
+   for(int i=0; i<size; i++){
+   cout<<arr[i]<<"\t";
+   }
+  
+}
+// Online C++ compiler to run C++ program online
+//==============================asending array===================
+#include <iostream>
+using namespace std;
+int main() {
+   int arr[]={7,4,9,3,8,2,1};
+   int size=sizeof(arr)/sizeof(arr[0]);
+   
+   for(int i=0; i<size; i++){
+       for(int j=i+1; j<size; j++){
+           if(arr[j]<arr[i]){
+               int tmp;
+               tmp=arr[j];
+               arr[j]=arr[i];
+               arr[i]=tmp;
+           }
+       }
+        
+   }
+   cout<<"\nafter applying\n";
+   for(int i=0; i<size; i++){
+   cout<<arr[i]<<"\t";
+   }
+  
+}
+// Online C++ compiler to run C++ program online
+//==============================2nd smallest element in array===================
+#include <iostream>
+using namespace std;
+int main() {
+   int arr[]={7,4,9,3,8,2,1};
+   int size=sizeof(arr)/sizeof(arr[0]);
+   
+   for(int i=0; i<2; i++){
+       for(int j=i+1; j<size; j++){
+           if(arr[j]<arr[i]){
+               int tmp;
+               tmp=arr[j];
+               arr[j]=arr[i];
+               arr[i]=tmp;
+           }
+       }
+        
+   }
+   
+   cout<<arr[1]<<"\t";
+   
+  
+}
+// Online C++ compiler to run C++ program online
+//==============================2nd largest element in array===================
+#include <iostream>
+using namespace std;
+int main() {
+   int arr[]={7,4,9,3,8,2,1};
+   int size=sizeof(arr)/sizeof(arr[0]);
+   
+   for(int i=0; i<2; i++){
+       for(int j=i+1; j<size; j++){
+           if(arr[j]>arr[i]){
+               int tmp;
+               tmp=arr[j];
+               arr[j]=arr[i];
+               arr[i]=tmp;
+           }
+       }
+        
+   }
+   
+   cout<<arr[1]<<"\t";
+   
+  
+}
+// Online C++ compiler to run C++ program online
+//==============================kth element in array===================
+#include <iostream>
+using namespace std;
+int main() {
+   int arr[]={7,4,9,3,8,2,1};
+   int size=sizeof(arr)/sizeof(arr[0]);
+   int k;
+   cout<<"enter the kth\n";
+   cin>>k;
+   
+   for(int i=0; i<k; i++){
+       for(int j=i+1; j<size; j++){
+           if(arr[j]<arr[i]){
+               int tmp;
+               tmp=arr[j];
+               arr[j]=arr[i];
+               arr[i]=tmp;
+           }
+       }
+        
+   }
+   
+   cout<<arr[k-1]<<"\t";
+   
+  
+}
+// Online C++ compiler to run C++ program online
+//==============================maximum  element in array===================
+#include <iostream>
+using namespace std;
+int main() {
+   int arr[]={7,4,9,3,10,2,1};
+   int size=sizeof(arr)/sizeof(arr[0]);
+   int max=arr[0];
+   for(int i=0; i<size; i++){
+       if(arr[i]>max){
+           max=arr[i];
+       }
+   }
+   cout<<max;
+}
+// Online C++ compiler to run C++ program online
+//==============================minimum  element in array===================
+#include <iostream>
+using namespace std;
+int main() {
+   int arr[]={7,4,9,3,10,2,1};
+   int size=sizeof(arr)/sizeof(arr[0]);
+   int mini=arr[0];
+   for(int i=0; i<size; i++){
+       if(arr[i]<mini){
+           mini=arr[i];
+       }
+   }
+   cout<<mini;
+}
+// Online C++ compiler to run C++ program online
+//=============================target sum indexing print  element in array===================
+#include <iostream>
+using namespace std;
+int main() {
+   int arr[]={7,4,9,3,2,1};
+   int size=sizeof(arr)/sizeof(arr[0]);
+   int target=10;
+   for(int i=0; i<size; i++){
+       for(int j=i+1; j<size; j++){
+           if(arr[i]+arr[j]==target)
+           {
+             cout<<"element of target sum:"<<arr[i]<<"\t"<<arr[j]<<"\n"<<"indexing of array:"<<i<<"\t"<<j;
+               return 0;
+           }
+       }
+   }
+   cout<<"no";
+   return 0;
+   
+}
+// Online C++ compiler to run C++ program online
+//=============================fing oftarget   element in array===================
+#include <iostream>
+using namespace std;
+int main() {
+   int arr[]={7,4,9,3,2,1};
+   int size=sizeof(arr)/sizeof(arr[0]);
+   int target=4;
+   for(int i=0; i<size; i++){
+       if(arr[i]==target){
+           cout<<"yes";
+           return 0;
+       }
+   }
+   cout<<"no";
+   return 0;
+  
+   
+}
+// Online C++ compiler to run C++ program online
+//=============================revers array===================
+#include <iostream>
+using namespace std;
+int main() {
+   int arr[]={7,4,9,3,2,1};
+   int size=sizeof(arr)/sizeof(arr[0]);
+   for(int i=0; i<size; i++){
+       cout<<arr[i]<<"\t";
+   }
+   int start=0;
+   int end=5;
+   while(start<end){
+       int tmp;
+       tmp=arr[start];
+       arr[start]=arr[end];
+       arr[end]=tmp;
+       start++;
+       end--;
+   }
+   cout<<"\nafter applying\n";
+   for(int i=0; i<size; i++){
+       cout<<arr[i]<<"\t";
+   }
+   
+  
+   
+}
+// Online C++ compiler to run C++ program online
+//=============================sinlge missing element array===================
+#include <iostream>
+using namespace std;
+int main() {
+   int arr[]={1,3,5,7,9,11,13,15};
+   int size=sizeof(arr)/sizeof(arr[0]);
+   for(int i=0; i<7; i++)
+   {
+       if(arr[i+1]-arr[i]>1)
+       {
+           cout<<++arr[i]<<"\t";
+          
+       }
+   }
+ }
+ // Online C++ compiler to run C++ program online
+//=============================multiple missing element array===================
+#include <iostream>
+using namespace std;
+int main() {
+   int arr[]={1,4,7,12,16,20,25};
+   int size=sizeof(arr)/sizeof(arr[0]);
+   int j=0;
+   for(int i=0; i<6; i++){
+       if(arr[i+1]-arr[i]>1){
+           for(int j=arr[i]+1; j<arr[i+1];j++){
+               cout<<j<<"\t";
+           }
+       }
+   }
+}
+   
+ 
+   
+        
+   
+   
+  
+
+   
+        
+   
+   
+  
+
+   
+        
+   
+   
+  
+
+
+   
+        
+   
+   
+  
+
+   
+        
+   
+   
+  
+
+   
+        
+   
+   
+  
+
+   
+        
+   
+   
+  
