@@ -779,6 +779,334 @@ int main() {
        }
    }
 }
+// Online C++ compiler to run C++ program online
+//=============================frequency element array===================
+#include <iostream>
+using namespace std;
+int main() {
+   int arr[]={1,4,3,3,2,2,1,1,4,5};
+   int size=sizeof(arr)/sizeof(arr[0]);
+   for(int i=0; i<size; i++)
+   {
+       int count=1;
+       if(arr[i]!=-1)
+       {
+           for(int j=i+1; j<size; j++)
+           {
+               if(arr[i]==arr[j])
+               {
+                   count++;
+                   arr[j]=-1;
+               }
+           }
+           cout<<"the freu of"<<arr[i]<<"is"<<count<<endl;
+       }
+   }
+   
+}
+// Online C++ compiler to run C++ program online
+//=============================unique element array===================
+#include <iostream>
+using namespace std;
+int main() {
+   int arr[]={1,4,3,3,2,2,1,1,4,5};
+   int size=sizeof(arr)/sizeof(arr[0]);
+   for(int i=0; i<size; i++)
+   {
+      
+       bool duplicate=false;
+       if(arr[i]!=-1)
+       {
+           for(int j=i+1; j<size; j++)
+           {
+               if(arr[i]==arr[j])
+               {
+                  
+                   arr[j]=-1;
+                   duplicate=true;
+               }
+           }
+            if(!duplicate && arr[i]!=-1){
+           cout<<arr[i];
+       }
+          
+       }
+      
+   }
+   
+}
+// Online C++ compiler to run C++ program online
+//=============================duplicate element array===================
+#include <iostream>
+using namespace std;
+int main() {
+   int arr[]={1,4,3,3,2,2,1,1,4,5};
+   int size=sizeof(arr)/sizeof(arr[0]);
+   for(int i=0; i<size; i++)
+   {
+      
+       bool duplicate=false;
+       if(arr[i]!=-1)
+       {
+           for(int j=i+1; j<size; j++)
+           {
+               if(arr[i]==arr[j])
+               {
+                  
+                   arr[j]=-1;
+                   duplicate=true;
+               }
+           }
+            if(duplicate ){
+           cout<<arr[i];
+       }
+          
+       }
+      
+   }
+   
+}
+// Online C++ compiler to run C++ program online
+//=============================palindrome array===================
+#include <iostream>
+using namespace std;
+int main() {
+   int arr[]={1,4,4,1};
+   int size=sizeof(arr)/sizeof(arr[0]);
+   int i=0;
+   int j=3;
+   while(i<j){
+       if(arr[i]!=arr[j]){
+           cout<<"not a palin";
+           return 0;
+       }
+       i++;
+       j--;
+   }
+   cout<<"palin";
+   return 0;
+   
+     
+}
+// Online C++ compiler to run C++ program online
+//=============================move zero's in end array===================
+#include <iostream>
+using namespace std;
+int main() {
+   int arr[]={1,4,0,0,0,3};
+   int size=sizeof(arr)/sizeof(arr[0]);
+   int j=0;
+   for(int i=0; i<size; i++){
+       if(arr[i]!=0){
+           int tmp;
+           tmp=arr[i];
+           arr[i]=arr[j];
+           arr[j]=tmp;
+           j++;
+       }
+   }
+   for(int i=0; i<size; i++){
+       cout<<arr[i];
+   }
+   
+   
+}
+// Online C++ compiler to run C++ program online
+//=============================zero count in array===================
+#include <iostream>
+using namespace std;
+int main() {
+   int arr[]={1,0,0,0,0,3};
+   int size=sizeof(arr)/sizeof(arr[0]);
+   int count=0;
+   for(int i=0; i<size; i++){
+       if(arr[i]==0){
+           count++;
+       }
+   }
+   cout<<"zero in array:"<<count;
+   return 0;
+}
+// Online C++ compiler to run C++ program online
+//=============================asending sort array===================
+#include <iostream>
+using namespace std;
+int main() {
+   int arr[]={1,3,4,6,7};
+   int size=sizeof(arr)/sizeof(arr[0]);
+   bool sort=true;
+   for(int i=0; i<size-1; i++){
+       if(arr[i]>arr[i+1]){
+           sort=false;
+           break;
+       }
+   }
+   if(sort==true){
+       cout<<"array is sort"<<endl;
+       return 0;
+   }
+   else{
+       cout<<"array is not sort";
+       return 0;
+   }
+   
+   
+   
+}
+// Online C++ compiler to run C++ program online
+//=============================desending sort array===================
+#include <iostream>
+using namespace std;
+int main() {
+   int arr[]={7,6,5,8,3,2};
+   int size=sizeof(arr)/sizeof(arr[0]);
+   bool sort=true;
+   for(int i=0; i<size-1; i++){
+       if(arr[i]<arr[i+1]){
+           sort=false;
+           break;
+       }
+   }
+   if(sort==true){
+       cout<<"array is sort"<<endl;
+       return 0;
+   }
+   else{
+       cout<<"array is not sort";
+       return 0;
+   }
+   
+   
+   
+}
+// Online C++ compiler to run C++ program online
+//=============================majority===================
+#include <iostream>
+using namespace std;
+int main() {
+   int arr[]={1,2,2,5,5,5,5,4,4,4};
+   int size=sizeof(arr)/sizeof(arr[0]);
+   int majority=0;
+   int maxcount=0;
+   for(int i=0; i<size; i++){
+       int count=0;
+       for(int j=0; j<size; j++){
+           if(arr[i]==arr[j]){
+               count++;
+           }
+           
+       }
+       if(count>maxcount){
+           maxcount=count;
+           majority=arr[i];
+       }
+   }
+   cout<<"majority:"<<majority;
+  }
+  // Online C++ compiler to run C++ program online
+//=============================keeping first occursion===================
+#include <iostream>
+using namespace std;
+int main() {
+   int arr[]={1,4,3,4,3,5,6,1,2,2};
+   int size=sizeof(arr)/sizeof(arr[0]);
+   for(int i=0; i<size; i++){
+       for(int j=i+1; j<size; j++){
+           if(arr[i]==arr[j]){
+               arr[j]=-1;
+           }
+       }
+       
+   }
+   for(int i=0; i<size; i++){
+           if(arr[i]!=-1){
+               cout<<arr[i];
+           }
+       }
+   
+   
+      
+  }
+   
+ 
+   
+        
+   
+   
+  
+
+   
+ 
+   
+        
+   
+   
+  
+
+   
+ 
+   
+        
+   
+   
+  
+
+   
+ 
+   
+        
+   
+   
+  
+
+   
+ 
+   
+        
+   
+   
+  
+
+   
+ 
+   
+        
+   
+   
+  
+
+   
+ 
+   
+        
+   
+   
+  
+
+   
+ 
+   
+        
+   
+   
+  
+
+   
+ 
+   
+        
+   
+   
+  
+
+   
+ 
+   
+        
+   
+   
+  
+
    
  
    
