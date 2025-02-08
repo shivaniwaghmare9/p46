@@ -102,3 +102,63 @@ int main() {
      cout<<arr[i]<<"\t";
  }
 }
+
+// Online C++ compiler to run C++ program online
+//===================================merges sort=======================
+#include <iostream>
+using namespace std;
+void merges(int a[],int low,int mid, int high){
+    int i,j,k,b[high+1];
+    i=low;
+    j=mid+1;
+    k=low;
+    while(i<=mid && j<=high){
+        if(a[i]<a[j]){
+            b[k]=a[i];
+            i++;
+        }
+        else{
+            b[k]=a[j];
+            j++;
+        }
+        k++;
+    }
+    while(i<=mid){
+        b[k]=a[i];
+        k++;
+        i++;
+    }
+    while(j<=high){
+        b[k]=a[j];
+        k++;
+        j++;
+    }
+    for(i=low; i<=high; i++){
+        a[i]=b[i];
+    }
+    
+}
+void divide(int a[],int low,int high){
+    int mid;
+    if(low<high){
+        mid=(low+high)/2;
+        divide(a,low,mid);
+        divide(a,mid+1,high);
+        merges(a,low,mid,high);
+    }
+}
+void printarr(int a[],int n){
+    int i;
+    for(i=0; i<n; i++){
+        cout<<a[i]<<"\t";
+    }
+    cout<<"\n";
+}
+int main() {
+    int a[]={20,15,2,13,12,10,6};
+    int n=sizeof(a)/sizeof(a[0]);
+    printarr(a,n);
+    divide(a,0,n-1);
+    cout<<"--------After mergessort----------------\n";
+    printarr(a,n);
+}
