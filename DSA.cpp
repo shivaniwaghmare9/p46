@@ -289,3 +289,46 @@ int main(){
     top p;
     p.display(arr,size);
 }
+
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+class top{
+    int c=0;
+    bool f=true;
+    public:
+    void bubble(int arr[],int s){
+        for(int i=0; i<s; i++){
+            for(int j=0; j<s-i-1; j++){
+                c++;
+                if(arr[j]>arr[j+1]){
+                    int tmp;
+                    tmp=arr[j+1];
+                    arr[j+1]=arr[j];
+                    arr[j]=tmp;
+                    f=false;
+                }
+            }
+            if(f==true){
+                break;
+            }
+        
+        }
+        cout<<"\n counter hit="<<c;
+    }
+    
+};
+int main() {
+    top p;
+    int arr[]={5,3,2,4,1};
+    int size=sizeof(arr)/sizeof(arr[0]);
+    for(int i=0; i<size; i++){
+        cout<<arr[i]<<"\t";
+    }
+    p.bubble(arr,size);
+    cout<<"after applying\n";
+    for(int i=0; i<size; i++){
+        cout<<arr[i]<<"\t";
+    }
+   
+}  
