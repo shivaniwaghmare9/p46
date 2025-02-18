@@ -162,3 +162,130 @@ int main() {
     cout<<"--------After mergessort----------------\n";
     printarr(a,n);
 }
+
+// Online C++ compiler to run C++ program online
+///============================bubbule basic==================================
+#include <iostream>
+using namespace std;
+
+class top{
+    public:
+    void show(int arr[], int s){
+        for(int i=0; i<s; i++){
+        cout<<arr[i]<<",";
+        }
+    }
+    
+};
+int main() {
+    int arr[]={4,3,5,2,6,1};
+    int size=sizeof(arr)/sizeof(arr[0]);
+    top p;
+    p.show(arr,size);
+    
+}
+
+// Online C++ compiler to run C++ program online
+///============================bubbule basic==================================
+#include <iostream>
+using namespace std;
+
+class top{
+    public:
+    void show(int arr[], int s){
+        for(int i=0; i<s; i++){
+            if(i==s-1){
+        cout<<arr[i];
+        }
+        else{
+             cout<<arr[i]<<",";
+        }
+    }
+    }
+};
+int main() {
+    int arr[]={4,3,5,2,6,1};
+    int size=sizeof(arr)/sizeof(arr[0]);
+    top p;
+    p.show(arr,size);
+    
+}
+
+// Online C++ compiler to run C++ program online
+///============================bubbule basic==================================
+#include <iostream>
+using namespace std;
+
+class top{
+    
+    public:
+    top bubble(int arr[], int s){
+        if(s==0){
+            cout<<"no data";
+        }
+        else{
+        for(int i=0; i<s; i++){
+            if(i==s-1){
+        cout<<arr[i];
+        }
+        else{
+             cout<<arr[i]<<",";
+        }
+    }
+    }
+    }
+};
+int main() {
+    top p;
+    int n;
+    cout<<"enter size of either 0 or no more\n";
+    cin>>n;
+    int arr[n];
+    // int arr[]={4,3,5,2,6,1};
+    int s=sizeof(arr)/sizeof(arr[0]);
+    for(int i=0; i<n; i++){
+        cin>>arr[i];
+    }
+    cout<<"s="<<s<<"\n";
+    p.bubble(arr,s);
+    
+}
+
+// Online C++ compiler to run C++ program online
+///============================bubbule basic==================================
+#include <iostream>
+using namespace std;
+class top{
+    public:
+    void display(int arr[] ,int s){
+        if(s==0){
+            cout<<"no data";
+        }
+        else{
+        for(int i=0; i<s; i++){
+            if(i==s-1){
+            cout<<arr[i];
+            }
+            else{
+                 cout<<arr[i]<<",";
+            }
+        }
+    }
+    }
+    
+};
+int main(){
+    int n;
+    cout<<"enter the values of 0 or moare\n";
+    cin>>n;
+    int arr[n];
+    
+    int size=sizeof(arr)/sizeof(arr[0]);
+    cout<<"enter:"<<n<<"values\n";
+    for(int i=0; i<n; i++){
+        cin>>arr[i];
+    }
+    cout<<"s="<<size<<"\n";
+    top p;
+    p.display(arr,size);
+}
