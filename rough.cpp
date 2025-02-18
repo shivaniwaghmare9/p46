@@ -105,3 +105,140 @@ int main() {
     
     
 }
+
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+class top{
+    int c=0;
+    bool f=true;
+    public:
+    void insertion(int arr[],int s){
+    for(int i=0; i<s; i++){
+        c++;
+        int chhotu=i;
+        while(chhotu>0 && arr[chhotu]<arr[chhotu-1]){
+            int tmp;
+            tmp=arr[chhotu-1];
+            arr[chhotu-1]=arr[chhotu];
+            arr[chhotu]=tmp;
+            chhotu--;
+            f=false;
+            
+        }
+        if(f==true){
+            break;
+        }
+    }
+    cout<<"\ncounter hit="<<c;
+        
+    }
+    
+    
+};
+int main() {
+    top p;
+    int arr[]={1,2,3,4,5,6};
+    int size=sizeof(arr)/sizeof(arr[0]);
+    cout<<"Before applying\n";
+    for(int i=0; i<size; i++){
+        cout<<arr[i]<<"\t";
+    }
+    p.insertion(arr,size);
+    cout<<"\nAfter applying\n";
+    for(int i=0; i<size; i++){
+        cout<<arr[i]<<"\t";
+    }
+    
+    
+}
+// Online C++ compiler to run C++ program online
+//==============================================insertion==================================
+#include <iostream>
+using namespace std;
+class top{
+    int c=0;
+    bool f=true;
+    public:
+    void insertion(int arr[],int s){
+    for(int i=0; i<s; i++){
+        c++;
+        int chhotu=i;
+        while(chhotu>0 && arr[chhotu]<arr[chhotu-1]){
+            int tmp;
+            tmp=arr[chhotu-1];
+            arr[chhotu-1]=arr[chhotu];
+            arr[chhotu]=tmp;
+            chhotu--;
+            f=false;
+            
+        }
+        if(f==true){
+            break;
+        }
+    }
+    cout<<"\ncounter hit="<<c;
+        
+    }
+    
+    
+};
+int main() {
+    top p;
+    int arr[]={1,2,3,4,5,6};
+    int size=sizeof(arr)/sizeof(arr[0]);
+    cout<<"Before applying\n";
+    for(int i=0; i<size; i++){
+        cout<<arr[i]<<"\t";
+    }
+    p.insertion(arr,size);
+    cout<<"\nAfter applying\n";
+    for(int i=0; i<size; i++){
+        cout<<arr[i]<<"\t";
+    }
+    
+    
+}
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+class top{
+    int c=0;
+    bool f=true;
+    public:
+    void insertion(int arr[],int s){
+        for(int i=0; i<s; i++){
+            c++;
+            int chhotu=i;
+            while(chhotu>0 && arr[chhotu]<arr[chhotu-1]){
+                int tmp;
+                tmp=arr[chhotu-1];
+                arr[chhotu-1]=arr[chhotu];
+                arr[chhotu]=tmp;
+                chhotu--;
+                f=false;
+            }
+            if(f==true){
+                break;
+            }
+        }
+        cout<<"\ncounter hit="<<c;
+    }
+    
+};
+int main() {
+    top p;
+    int arr[]={1,2,3,4,5};
+    int size=sizeof(arr)/sizeof(arr[0]);
+    cout<<"\nBefore applying\n";
+    for(int i=0; i<size; i++){
+        cout<<arr[i]<<"\t";
+    }
+    p.insertion(arr,size);
+    cout<<"\nAfter applying\n";
+    for(int i=0; i<size; i++){
+        cout<<arr[i]<<"\t";
+    }
+    
+    
+}
