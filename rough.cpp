@@ -560,7 +560,7 @@ int main() {
 }
 
 // Online C++ compiler to run C++ program online
-//==========================================merge sort================================
+//==========================================quick sort================================
 #include <iostream>
 using namespace std;
 int divide(int arr[],int low,int high){
