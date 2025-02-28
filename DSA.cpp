@@ -767,5 +767,60 @@ int main(){
     printarr(a,n);
 }
 
+// Online C++ compiler to run C++ program online
+//==========================================dynamic program of vector=============================================================
+#include <iostream>
+using namespace std;
+#include <vector>
+int main() {
+    vector<int>v;
+    int n,b;
+    cout<<"How may element"<<"\n";
+    cin>>n;
+    for(int i=1; i<=n; i++)
+    {
+        cout<<"Enter element"<<"\n";
+        cin>>b;
+        v.push_back(b);
+    }
+    for(auto p:v)
+    {
+        cout<<p<<"\t";
+    }
+    cout<<"\n";
+    v.pop_back();
+    for(auto p:v)
+    {
+        cout<<p<<"\t";
+    }
+}
+
+// Online C++ compiler to run C++ program online
+//==========================================dynamic program of vector=============================================================
+#include <iostream>
+using namespace std;
+#include <vector>
+int main() {
+    vector<int>v;
+    int n,b;
+    cout<<"How may element"<<"\n";
+    cin>>n;
+    for(int i=1; i<=n; i++)
+    {
+        cout<<"Enter element"<<"\n";
+        cin>>b;
+        v.push_back(b);
+    }
+    for(auto p:v)
+    {
+        cout<<p<<"\t";
+    }
+    cout<<"\n";
+    v.pop_back();
+    for(auto p:v)
+    {
+        cout<<p<<"\t";
+    }
+}
 
 
