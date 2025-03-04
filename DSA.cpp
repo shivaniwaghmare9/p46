@@ -1073,8 +1073,156 @@ int main() {
         }
          cout<<"\n";
     }
+}
+// Online C++ compiler to run C++ program online
+//===================================2D VECTOR================================================================
+#include <iostream>
+#include<vector>
+using namespace std;
+
+int main() {
+    vector<vector<int>>v1;
+    int row,col,v;
+    cout<<"Enter no of row\n";
+    cin>>row;
+    cout<<"Enter no of coulmns\n";
+    cin>>col;
+    for(int i=1; i<=row; i++){
+        vector<int>v2;
+        for(int j=1; j<=col; j++){
+            cout<<"enter values\n";
+            cin>>v;
+            v2.push_back(v);
+        }
+        v1.push_back(v2);
+    }
+    cout<<"\n stored value ar\n";
+    for(int i=0; i<v1.size();i++){
+        for(int j=0; j<v1[i].size();j++){
+            cout<<v1[i][j]<<"\t";
+        }
+        cout<<"\n";
+    }
+}
+// Online C++ compiler to run C++ program online
+//===================================2D VECTOR================================================================
+#include <iostream>
+#include<vector>
+using namespace std;
+// #include <tuple>
+
+int main() {
+    pair<int,string>p{101,"hny"};
+    p=make_pair(103,"joy");
+    cout<<p.first<<":"<<p.second<<"\t";
+    
    
     
     
     
+    vector<pair<int,string>>v;
+    int rollno,n;
+    string name;
+    cout<<"\nHow many data stored\n";
+    cin>>n;
+    for(int i=1; i<=n; i++){
+        cout<<"Enter rollno=";
+        cin>>rollno; 
+        cout<<"Enter name=";
+        cin>>name;
+         
+        v.push_back({rollno,name});
+    }
+    cout<<"\n stored data\n";
+    for(int i=0; i<v.size();i++){
+       cout<<v[i].first<<":"<<v[i].second<<"\n";
+    }
+    
+            
+}
+// Online C++ compiler to run C++ program online
+//===================================2D VECTOR================================================================
+#include <iostream>
+#include<vector>
+#include<iterator>
+
+#include<algorithm>
+using namespace std;
+int main() {
+    vector<int>v;
+    // int n,b;
+    // cout<<"How many values stored\n";
+    // cin>>n;
+    // for(int i=1; i<=n; i++){
+    //     cout<<"enter the val3ue\n";
+    //     cin>>b;
+    //     v.push_back(b);
+    // }
+    v.push_back(4);
+    v.push_back(6);
+    v.push_back(3);
+    v.push_back(7);
+    v.push_back(9);
+    for(auto p:v){
+        cout<<p<<"\t";
+    }
+    cout<<"\nAfter popback\n";
+   v.pop_back();
+    for(auto p:v){
+        cout<<p<<"\t";
+    }
+    cout<<"\nAfter insert\n";
+    vector<int>::iterator it=v.begin();
+    v.insert(it+1,32);
+     for(auto p:v){
+        cout<<p<<"\t";
+    }
+    cout<<"\nAfter erase\n";
+    v.erase(it+2);
+    for(auto p:v){
+        cout<<p<<"\t";
+    }
+    cout<<"\nAfter insert ending\n";
+    vector<int>::iterator itt=v.end();
+    v.insert(itt-1,33);
+    v.insert(itt-2,35);
+    for(auto p:v){
+        cout<<p<<"\t";
+    }
+    cout<<"\nAfter erase ending\n";
+    v.erase(itt-2);
+    for(auto p:v){
+        cout<<p<<"\t";
+    }
+    // int x;
+    // cout<<"\nenter the value for search\n";
+    // cin>>x;
+    // auto j=find(v.begin(),v.end(),x);
+    // cout<<*j;
+    // v.erase(j);
+    // for(auto p:v){
+    //     cout<<p<<"\t";
+    // }
+    cout<<"\nmax="<<*max_element(v.begin(),v.end());
+    cout<<"\nmin="<<*min_element(v.begin(),v.end());
+    
+    cout<<"\nAfter revers\n";
+    reverse(v.begin(),v.end());
+    for(auto p:v){
+        cout<<p<<"\t";
+    }
+    cout<<"\n";
+   if(v.empty()){
+       cout<<"vector is emty";
+   }
+   else{
+       cout<<"not emty";
+   }
+   cout<<"\n";
+   v.clear();
+   if(v.empty()){
+       cout<<"vector is emty";
+   }
+    
+            
 }
