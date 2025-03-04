@@ -1259,6 +1259,77 @@ int main() {
     for(auto p:v){
         cout<<p<<"\t";
     }
+}
+// Online C++ compiler to run C++ program online
+//=============================swapping of two arrays======================================================================
+#include <iostream>
+using namespace std;
+#include<array>
+int main() {
+    array<int,4>v1{1,2,3,4};
+    array<int,4>v2{6,5,4};
+    v1.swap(v2);
+    cout<<"\n After swapping v1\n";
+    for(auto p1:v1){
+        cout<<p1<<"\t";
+    }
+    cout<<"\n After swapping v2\n";
+    for(auto p2:v2){
+        cout<<p2<<"\t";
+    }
+}
+// Online C++ compiler to run C++ program online
+//=============================ssorting and second highest value of arrays======================================================================
+#include <iostream>
+using namespace std;
+#include<array>
+#include<algorithm>
+int main() {
+    array<int,4>v1{4,2,1,3};
+    array<int,4>v2{6,5,4,8};
+    array<double,3>v3{24.1,26.2,22.3};
+    sort(v1.begin(),v1.end());
+    cout<<"\n After sorting v1\n";
+    for(auto p1:v1){
+        cout<<p1<<"\t";
+    }
+    cout<<"\nsecond highest vlaue of v1\n";
+    cout<<v1[2];
+    sort(v2.begin(),v2.end());
+    cout<<"\n After sorting v2\n";
+    for(auto p2:v2){
+        cout<<p2<<"\t";
+    }
+    cout<<"\nsecond highest value of v2\n";
+    cout<<v2[2];
+    sort(v3.begin(),v3.end());
+    cout<<"\n After sorting v3\n";
+    for(auto p3:v3){
+        cout<<p3<<"\t";
+    }
+    cout<<"\nsecond highest value of v3\n";
+    cout<<v3[2];
+}
+// Online C++ compiler to run C++ program online
+//=============================front and back values of arrays======================================================================
+#include <iostream>
+using namespace std;
+#include<array>
+#include<algorithm>
+int main() {
+    array<int,4>v1{4,2,1,3};
+    array<int,4>v2{6,5,4,8};
+    array<double,4>v3{24.1,26.2,22.3,34.2};
     
+    cout<<"\n font values of array\n";
+    cout<<"font:"<<v1.front()<<"\n";
+    cout<<"font:"<<v2.front()<<"\n";
+    cout<<"font:"<<v3.front()<<"\n";
+    
+     cout<<"\n back values of array\n";
+    cout<<"font:"<<v1.back()<<"\n";
+    cout<<"font:"<<v2.back()<<"\n";
+    cout<<"font:"<<v3.back()<<"\n";
         
 }
+
