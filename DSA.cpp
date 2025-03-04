@@ -1141,7 +1141,7 @@ int main() {
             
 }
 // Online C++ compiler to run C++ program online
-//===================================2D VECTOR================================================================
+//===================================VECTOR================================================================
 #include <iostream>
 #include<vector>
 #include<iterator>
@@ -1225,4 +1225,40 @@ int main() {
    }
     
             
+}
+// Online C++ compiler to run C++ program online
+//============================size and capacity)======================================================================
+#include <iostream>
+using namespace std;
+#include <vector>
+int main() {
+    vector<int>v{1,4,3};
+    cout<<"size of v:"<<v.size()<<"\n";
+    cout<<"capicity of v:"<<v.capacity()<<"\n";
+    for(auto p:v){
+        cout<<p<<"\t";
+    }
+    cout<<"\nAfter push back\n";
+    v.push_back(20);
+    cout<<"size of v:"<<v.size()<<"\n";
+    cout<<"capicity of v:"<<v.capacity()<<"\n";
+    for(auto p:v){
+        cout<<p<<"\t";
+    }
+    cout<<"\nAfter second push back\n";
+    v.push_back(21);
+    v.push_back(21);
+    v.push_back(21);
+    cout<<"size of v:"<<v.size()<<"\n";
+    cout<<"capicity of v:"<<v.capacity()<<"\n";
+    for(auto p:v){
+        cout<<p<<"\t";
+    }
+    cout<<"\nAfter popback\n";
+    v.pop_back();
+    for(auto p:v){
+        cout<<p<<"\t";
+    }
+    
+        
 }
