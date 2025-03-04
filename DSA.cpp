@@ -823,4 +823,224 @@ int main() {
     }
 }
 
+// Online C++ compiler to run C++ program online
+//==========================================dynamic program of vector=============================================================
+#include <iostream>
+using namespace std;
+#include <vector>
+#include <iterator>
+int main() {
+    vector<int>v;   
+    int n ,b;
+    cout<<"How many element"<<"\n";
+    cin>>n;
+   cout<<"size of v="<<v.size()<<"\n"; 
+   for(int i=1; i<=n; i++){
+       cout<<"enter the number"<<"\n";
+       cin>>b;
+       v.push_back(b);
+   }
+    for(auto p:v){
+        cout<<p<<"\t";             
+    }  
+    
+    v.pop_back();
+    cout<<"\nAfter deletion\n";
+    for(auto p:v){
+        cout<<p<<"\t";             
+    }   
+    
+   
+}
 
+#include <iostream>
+#include <vector>
+#include <iterator>  //erase mangta h iterator
+using namespace std;
+int main(){
+    vector<int>v;
+    v.push_back(3);
+    v.push_back(4);
+    v.push_back(1);
+    v.push_back(23);
+    v.push_back(15);
+    v.push_back(47);
+    for(auto p:v){
+        cout<<p<<"\t";   //push_back
+    }
+    cout<<"\n";
+    v.pop_back();
+     for(auto p:v){
+        cout<<p<<"\t";   //pop_back
+    }
+    cout<<"\n";
+    vector<int>::iterator it=v.begin();
+    v.erase(it+2);      //second indexing erase
+    for(auto p:v){
+        cout<<p<<"\t";   //erase 
+    }
+    
+    
+}
+// Online C++ compiler to run C++ program online
+//================================search based erase====================================
+#include <iostream>
+using namespace std;
+#include <vector>
+#include <algorithm>
+#include <iterator>
+int main() {
+   vector<int>v;
+   v.push_back(7);
+   v.push_back(1);
+   v.push_back(6);
+   v.push_back(4);
+   v.push_back(9);
+   for(auto p:v){
+       cout<<p<<"\t";
+   }
+  cout<<"\n After insert\n";
+  vector<int>::iterator  it=v.begin();
+  v.insert(it,8);
+  for(auto p:v){
+      cout<<p<<"\t";
+  }
+  cout<<"\n after erase\n";
+  v.erase(it+1);
+  for(auto p:v){
+      cout<<p<<"\t";
+  }
+  int x;
+    cout<<"enter the value for search";
+    cin>>x;
+    auto j=find(v.begin(),v.end(),x);
+    cout<<*j; //or ye value ke according hota h delete
+    
+    v.erase(j); // address ke according hm delete kr sakte h
+    cout<<"\n";
+    
+    for(auto p:v){
+        cout<<p<<"\t";
+    }
+    
+   
+}
+
+// Online C++ compiler to run C++ program online
+//================================search based erase====================================
+#include <iostream>
+using namespace std;
+#include <vector>
+#include <algorithm>
+#include <iterator>
+int main() {
+   vector<int>v;
+   v.push_back(7);
+   v.push_back(1);
+   v.push_back(6);
+   v.push_back(4);
+   v.push_back(9);
+   for(auto p:v){
+       cout<<p<<"\t";
+   }
+  cout<<"\n After insert\n";
+  vector<int>::iterator  it=v.begin();
+  v.insert(it,8);
+  for(auto p:v){
+      cout<<p<<"\t";
+  }
+  cout<<"\n after erase\n";
+  v.erase(it+1);
+  for(auto p:v){
+      cout<<p<<"\t";
+  }
+  cout<<"\n";
+  int x;
+    cout<<"enter the value for search";
+    cin>>x;
+    auto j=find(v.begin(),v.end(),x);
+    cout<<*j; //or ye value ke according hota h delete
+    
+    v.erase(j); // address ke according hm delete kr sakte h
+    cout<<"\n";
+    
+    for(auto p:v){
+        cout<<p<<"\t";
+    }
+   cout<<"\n After reverse\n";
+     reverse(v.begin(),v.end());
+     for(auto p:v){
+        cout<<p<<"\t";
+    }
+     
+    cout<<"\n max value="<<*max_element(v.begin(),v.end());
+     cout<<"\n min value="<<*min_element(v.begin(),v.end());
+cout<<"\n";
+     if(v.empty())
+     {
+         cout<<"\nvector is emty\n";
+     }
+     else{
+         cout<<"vector is not emty";
+     }
+     v.clear();
+     if(v.empty())
+      {
+         cout<<"\nvector is emty\n";
+     }
+    
+   
+}
+
+
+// Online C++ compiler to run C++ program online
+//===============================pairh===================================
+#include <iostream>
+using namespace std;
+#include <vector>
+//#include <tuple>
+int main() {
+    vector<pair<int,string>>v;
+    int rollno,n;
+    string name;
+    cout<<"\n How many data stored\n";
+    cin>>n;
+    for(int i=1; i<=n; i++){
+        cout<<"Enter roll:";
+        cin>>rollno;
+        cout<<"Enter name:";
+        cin>>name;
+        v.push_back({rollno,name});
+    }
+    cout<<"\nstored data are\n";
+    for(int i=0; i<v.size(); i++){
+        cout<<v[i].first<<":"<<v[i].second<<"\n";
+    }
+    
+}
+// Online C++ compiler to run C++ program online
+//===============================tuple==========================================
+#include <iostream>
+using namespace std;
+#include <vector>
+#include <tuple>
+int main() {
+    vector<tuple<int,string,int>>v;
+    int rollno,age,n;
+    string name;
+    cout<<"\n How many data stored\n";
+    cin>>n;
+    for(int i=1; i<=n; i++){
+        cout<<"Enter roll:";
+        cin>>rollno;
+        cout<<"Enter name:";
+        cin>>name;
+        cout<<"Enter age:";
+        cin>>age;
+        v.push_back({rollno,name,age});
+    }
+    cout<<"\nstored data are\n";
+    for(int i=0; i<v.size(); i++){
+        cout<<get<0>(v[i])<<":"<<get<1>(v[i])<<":"<<get<2>(v[i])<<"\n";
+    }
+}
