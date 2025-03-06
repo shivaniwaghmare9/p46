@@ -1474,6 +1474,47 @@ else{
 }
 
 }
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <vector>
+using namespace std;
+int main() {
+int n1,n2;
+cout<<"size of vector 1:";
+cin>>n1;
+cout<<"size of vector 2:";
+cin>>n2;
+ 
+ vector<int>v1(n1);
+ vector<int>v2(n2);
+ vector<int>sum(max(n1,n2));
+ 
+ 
+
+for(int i=0; i<n1; i++){
+    cout<<"element of v1:";
+    cin>>v1[i];
+}
+for(int i=0; i<n2; i++){
+    cout<<"element of v2:";
+    cin>>v2[i];
+}
+
+for(int i=0; i<sum.size();i++){
+    if(i<v1.size()){
+        sum[i]+=v1[i];
+    }
+    if(i<v2.size()){
+        sum[i]+=v2[i];
+    }
+
+}
+cout<<"\n addition\n";
+for(int i=0; i<sum.size();i++){
+    cout<<sum[i]<<"\t";
+}
+
+}
 
 
 
