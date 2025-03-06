@@ -1332,4 +1332,149 @@ int main() {
     cout<<"font:"<<v3.back()<<"\n";
         
 }
+// Online C++ compiler to run C++ program online
+//============================namespace ke andar namespace======================================================================================
+#include <iostream>
+using namespace std;
+namespace cybrom{
+    void student(){
+        cout<<"\ncybrom student\n";
+    }
+    namespace bhopal{
+    void student(){
+        cout<<"\nbhopal student\n";
+    }
+  }
+  void show(){
+      cout<<"\nfirst program\n";
+  }
+  class iostreamnew{
+      public:void show(){
+          cout<<"\n class example\n";
+      }
+  }
+  coutnew;
+  
+}
+using namespace cybrom;
+int main(){
+
+    bhopal::student();
+    student();
+    show();
+    coutnew.show();
+    iostreamnew obj;
+    obj.show();
+}
+
+// Online C++ compiler to run C++ program online
+//=================================ADDITION OF TWO VECTORS===============================================================================================
+#include <iostream>
+using namespace std;
+#include<vector>
+int main() {
+    int n;
+    cout<<"enter the size of vectors:";
+    cin>>n;
+    
+    vector<int>v1(n);
+    vector<int>v2(n);
+    vector<int>sum(n);
+    
+    for(int i=0; i<n; i++){
+        cout<<"enter the element of v1:";
+        cin>>v1[i];
+    }
+    
+     for(int i=0; i<n; i++){
+        cout<<"enter the element of v2:";
+        cin>>v2[i];
+    }
+    
+     for(int i=0; i<n; i++){
+        sum[i]=v1[i]+v2[i];
+    }
+    cout<<"\nAddition of vectors\n";
+     for(int i=0; i<n; i++){
+        cout<<sum[i]<<"\t";
+    }
+//   int n;
+//   cout << "Enter the size of vectors: ";
+//   cin >> n;
+
+//   vector<int> v1(n);
+//   vector<int> v2(n);
+//   vector<int> sum(n);
+
+ 
+//   for (int i = 0; i < n; i++) {
+//   cout << "Enter elements of vector v1: ";
+//     cin >> v1[i];
+//   }
+
+//   for (int i = 0; i < n; i++) {
+//     cout << "Enter elements of vector v2: ";
+//     cin >> v2[i];
+//   }
+
+//   for (int i = 0; i < n; i++) {
+//     sum[i] = v1[i] + v2[i];
+//   }
+
+//   cout << "Addition of v1 and v2: ";
+//   for (int i = 0; i < n; i++) {
+//     cout << sum[i] << " ";
+//   }
+//   cout<<endl;
+
+  
+}
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <vector>
+using namespace std;
+int main() {
+int n1,n2;
+cout<<"size of vector 1:";
+cin>>n1;
+cout<<"size of vector 2:";
+cin>>n2;
+ 
+ vector<int>v1(n1);
+ vector<int>v2(n2);
+ 
+ 
+
+for(int i=0; i<n1; i++){
+    cout<<"element of v1:";
+    cin>>v1[i];
+}
+for(int i=0; i<n2; i++){
+    cout<<"element of v2:";
+    cin>>v2[i];
+}
+int sumv1=0;
+int sumv2=0;
+for(int i=0; i<n1;i++){
+    sumv1+=v1[i];
+}
+cout<<"sumof v1:"<<sumv1<<"\n";
+for(int i=0; i<n2;i++){
+    sumv2+=v2[i];
+}
+cout<<"sumof v2:"<<sumv2<<"\n";
+if(sumv1>sumv2){
+    cout<<"maximum of v1:"<<sumv1<<"\n";
+}
+else if(sumv2>sumv1){
+    cout<<"maximum of v2:"<<sumv2<<"\n";
+}
+else{
+    cout<<"both are equal";
+}
+
+}
+
+
+
 
