@@ -1660,6 +1660,87 @@ int main()
         cout<<"invalid";
     }
 }
+// Online C++ compiler to run C++ program online
+//===================================STACKS=========================================================================================
+#include <iostream>
+using namespace std;
+class stacks
+{
+    public:int *arr;
+    int n,top;
+    stacks(int s)
+    {
+       n=s;
+       arr=new int[n];
+       top=-1;
+    }
+    void pushs(int v)
+    {
+        if(top==n-1)
+        {
+            cout<<"overflow";
+            return ;
+        }
+       
+            top++;
+            arr[top]=v;
+    }
+
+    int pops()
+    {
+        if(top==-1)
+        {
+            cout<<"under flow";
+            return 0;
+        }
+        
+           return top--; 
+        
+    }
+    int tops(){
+        if(top==-1)
+        {
+            cout<<"there no element";
+            return 0;
+        }
+        return arr[top];
+    }
+    
+};
+int main() {
+    int s,v;
+    cout<<"enter size of arrays\n";  //ydi size 3 dalge to
+    cin>>s;
+    stacks st(s);
+    for(int i=1; i<=s; i++)
+    {
+        cout<<"enter the value\n";    //value 1 2 3 insert karege to
+        cin>>v;
+        st.pushs(v);
+        
+    }
+   
+    st.pushs(12);  //overflow qki size se jyada value insert kr di
+    //  while(st.top!=-1){
+    //     cout<<st.tops()<<"\t";
+    //     st.pops();
+    // }
+    cout<<"\ntop element:"<<st.tops();   //3
+    cout<<"\nAfter pop element of top:";//2
+    st.pops();
+    cout<<st.tops();
+     cout<<"\nthan After pop element of top:"; //1
+    st.pops();
+    cout<<st.tops();
+     cout<<"\nonce After pop element of top:";////there is no element
+    st.pops();
+    cout<<st.tops();
+    cout<<"\nalso once After pop element of top:";//underflow qki deletation -1 pr a gya
+    st.pops();
+    cout<<st.tops();
+     
+   
+}
 
 
 
