@@ -1836,6 +1836,72 @@ int main() {
     cout<<"\nsmallest:"<<y<<"\t";
     
 }
+// Online C++ compiler to run C++ program online
+//==================================stacks===============================================================================
+#include <iostream>
+using namespace std;
+class stacks{
+    public:int *arr;
+    int n,top;
+    stacks(int s){
+        n=s;
+        arr=new int[n];
+        top=-1;
+    }
+    void pushs(int v){
+        if(top==n-1){
+            cout<<"overflow";
+            return ;
+        }
+        top++;
+        arr[top]=v;
+        
+    }
+    int pops(){
+        if(top==-1){
+            cout<<"underflow";
+            return 0;
+        }
+        return top--;
+    }
+    int tops(){
+        if(top==-1){
+            cout<<"there are no element";
+            return 0;
+        }
+        return arr[top];
+    }
+};
+
+int main() {
+    int s,v;
+    cout<<"how many vlaue insert\n"; //3
+    cin>>s;
+    stacks st(s);
+    for(int i=1; i<=s; i++){
+        cout<<"enter the value\n"; // 1 2 3
+        cin>>v;
+        st.pushs(v);
+    }
+    // while(st.top!=-1){
+    //     cout<<st.tops()<<"\t";
+    //     st.pops();
+    // }
+    st.pushs(23);   //overflow of according size
+    cout<<"\ntop element:"<<st.tops(); //3
+    st.pops();
+    cout<<"\nafetr pop top element:"<<st.tops();//2
+    st.pops();
+    cout<<"\nafetr pop top element:"<<st.tops();//1
+     st.pops();
+    cout<<"\nafetr pop top element:"<<st.tops();//no element
+     st.pops();
+    cout<<"\nafetr pop top element:"<<st.tops(); //underflow
+   
+   
+    
+    
+}
 
 
 
