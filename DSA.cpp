@@ -1792,6 +1792,50 @@ forward_list<int>f1;  //merge ke liye dusra forward_list banaya
   cout<<"size="<<distance(f.begin(),f.end());
   
 }
+// Online C++ compiler to run C++ program online
+//===================================stack smallest 7greater value===============================================================================
+#include <iostream>
+using namespace std;
+#include<stack>
+int main() {
+    stack<int>s;  //static
+//     s.push(23);
+//     s.push(4);
+//     s.push(32);
+//     s.push(2);
+//     s.push(40);
+//     s.push(12);
+//   while(!s.empty()){
+//       cout<<s.top()<<"\t";
+//       s.pop();
+//   }
+   //user se input
+   
+   int n, a;
+   cout<<"\nenter the value of stack\n";
+   cin>>n;
+   for(int i=1; i<=n; i++){
+       cout<<"enter the value\n";
+       cin>>a;
+       s.push(a);
+   }
+    // while(!s.empty()){
+    //     cout<<s.top()<<"\t";  //jb smallest yaa greater nikalana ho tb ye ye nhii likhna hota h
+    //     s.pop();
+    // }
+    //===============================smallest value==============================
+    
+   
+    int y=s.top();
+    while(!s.empty()){
+        if(y>=s.top()){  //y<=to greater value
+        y=s.top();
+        }
+        s.pop();
+    }
+    cout<<"\nsmallest:"<<y<<"\t";
+    
+}
 
 
 
