@@ -1741,6 +1741,57 @@ int main() {
      
    
 }
+// Online C++ compiler to run C++ program online
+//====================================forward_list(Orsingly list)=============================================================================================
+#include <iostream>
+using namespace std;
+#include<forward_list>
+int main() {
+  forward_list<int>f;
+   f.push_front(13);
+   f.push_front(3);
+   f.push_front(21);
+   f.push_front(13);
+forward_list<int>f1;  //merge ke liye dusra forward_list banaya
+   f1.push_front(2);
+   f1.push_front(16);
+   f1.push_front(33);
+   f1.push_front(23);
+//isme front se value aati h phle niche vali fir uske upar-----
+   cout<<"\nlist of f:"; 
+   for(auto p:f){
+       cout<<p<<"\t";
+   }
+   cout<<"\nlist of f1:";
+   for(auto p:f1){
+       cout<<p<<"\t";
+   }
+   cout<<"\nAfter merge f&f1:";
+   f.merge(f1);
+   for(auto p:f){
+       cout<<p<<"\t";
+   }
+  cout<<"\nAfter sorting merge:";
+  f1.sort();
+  f.sort();
+  f.merge(f1);
+  for(auto p:f){
+      cout<<p<<"\t";
+  }
+  cout<<"\nRevers value:";
+  f.reverse();
+  for(auto p:f){
+      cout<<p<<"\t";
+  }
+  cout<<"\nunique values:";
+  f.unique();
+  for(auto p:f){
+      cout<<p<<"\t";
+  }
+  cout<<"\nDistance of forward_list:";
+  cout<<"size="<<distance(f.begin(),f.end());
+  
+}
 
 
 
