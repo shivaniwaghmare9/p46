@@ -683,3 +683,27 @@ int main() {
  }
  cout<<sum;
 }
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main () { 
+int num;
+int num1;
+int num2;
+int percent;
+cout<<"enter the number";
+cin>>num>>num1>>num2;
+percent=((num+num1+num2)*100)/500;
+cout<<percent;
+(percent>=50)?cout<<"pass": cout<<"fail";
+
+
+
+  
+}
+
+
+
+  
+
+
