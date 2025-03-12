@@ -706,4 +706,88 @@ cout<<percent;
 
   
 
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+    int pass;
+    cout<<"enter your password";
+    cin>>pass;
+    if(pass==1234)
+    {
+        cout<<"open";
+        
+    }
+    else 
+     {
+        cout<<" invalid password try again";
+        cin>>pass;
+        if (pass==1234)
+        {
+            cout<<"open";
+        }
+        else 
+        { 
+            cout<<"invalid passward";
+    }
+}
+}
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+i
+nt main() {
+    int time=20;
+    (time>12)?
+    cout<<"ge": cout<<"gm";
+}// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+    int pass;
+    cout<<"enter your password";
+    cin>>pass;
+    if(pass==1234)
+    {
+        cout<<"open";
+        
+    }
+    else 
+     {
+        cout<<" invalid password try again";
+        cin>>pass;
+        if (pass==1234)
+        {
+            cout<<"open";
+        }
+        else 
+        { 
+            cout<<"invalid passward card block";
+            cin>>pass;
+            if (pass==1234)
+            {
+                cout<<"try again";
+            }
+            else
+            {
+                cout<<"card block";
+            }
+    }
+}
+}
+
+
+
+
+    
+
+
+
+
+
+
+
+
+    
+
 
