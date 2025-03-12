@@ -1897,11 +1897,74 @@ int main() {
     cout<<"\nafetr pop top element:"<<st.tops();//no element
      st.pops();
     cout<<"\nafetr pop top element:"<<st.tops(); //underflow
-   
-   
-    
-    
 }
-
+// Online C++ compiler to run C++ program online
+//===============================VECTOR DYNAMIC VALUE INSERT AND DELETE===========================================================================================
+#include <iostream>
+using namespace std;
+#include<vector>
+int main() {
+   vector<int>v;
+   int n,b;
+   cout<<"how many element\n";
+   cin>>n;
+   for(int i=1; i<=n; i++){
+       cout<<"enter value\n";
+       cin>>b;
+       v.push_back(b);
+   }
+   for(auto p:v){
+       cout<<p<<"\t";
+   }
+   cout<<"\nafter pop:";
+   v.pop_back();
+    for(auto p:v){
+       cout<<p<<"\t";
+   }
+}
+// Online C++ compiler to run C++ program online
+//==================================doubly list====================================================================================
+#include <iostream>
+using namespace std;
+#include<list>
+int main() {
+  list<int>l;
+  l.push_front(12);
+  l.push_front(3);
+  l.push_back(42);   //back push
+  l.push_front(34);
+  l.push_front(2);
+  l.push_front(23);
+  for(auto p:l){
+      cout<<p<<"\t";
+  }
+  cout<<"\nAfter sort:";
+  l.sort();
+  for(auto p:l){
+      cout<<p<<"\t";
+  }
+  //dynamic insert deletion updation /
+  cout<<"\nAfter erase:";  //12  erase
+  auto it=l.begin ();     //set the position of iterator
+  advance(it,2);
+  l.erase(it);
+  for(auto p:l){
+      cout<<p<<"\t";
+  }
+  cout<<"\nAfter inserting:";
+  auto it1=l.begin ()   ;     //set the position of iterator
+  advance(it1,2);
+  l.insert(it1, 30);
+  for(auto p:l){
+      cout<<p<<"\t";
+  }
+   cout<<"\nAfter updation:";
+  auto it2=l.begin ()   ;     //set the position of iterator
+  advance(it2,3);
+  l.insert(it2, 300);
+  for(auto p:l){
+      cout<<p<<"\t";
+  }
+}
 
 
