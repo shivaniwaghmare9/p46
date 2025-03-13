@@ -2093,5 +2093,82 @@ int main() {
    cout<<st.tops();
    
 }
+// Online C++ compiler to run C++ program online
+//============================namespace ke andar namespace======================================================================================
+#include <iostream>
+using namespace std;
+
+
+    namespace cybrom {
+        void student(){
+            cout<<"\n cybrom student\n";
+        }
+     namespace bhopal{
+         void student(){
+             cout<<"\n bhopal studnet\n";
+         }
+     } 
+     void show(){
+         cout<<"\n first program\n";
+     }
+     class iostreamnew{
+         public:void show(){
+             cout<<"\n class example\n";
+         }
+     }
+     coutnew;
+        
+    }
+    using namespace cybrom;
+    int main() {
+        bhopal::student();
+        student();
+        show();
+        coutnew.show();
+        iostreamnew obj;
+        obj.show();
+}
+
+// Online C++ compiler to run C++ program online
+//============================namespace ke andar namespace======================================================================================
+#include <iostream>
+using namespace std;
+
+
+    namespace cybrom {
+        void student(){
+            cout<<"\n cybrom student\n";
+        }
+     namespace bhopal{
+         void student(){
+             cout<<"\n bhopal studnet\n";
+         }
+     } 
+     void show(){
+         cout<<"\n first program\n";
+     }
+     class iostreamnew{
+         public:void show(){
+             cout<<"\n class example\n";
+         }
+     }
+     coutnew;
+        
+    }
+    using namespace cybrom;
+    int main() {
+         bhopal::student();    //with using namespace cybrom
+         student();
+         show();
+         coutnew.show();
+        iostreamnew obj;
+        obj.show();
+        
+        cybrom:: bhopal::student(); ///without using namespace cybrom ke ese call krna pdega 
+        cybrom::student();
+         cybrom::show();
+         cybrom::coutnew.show();
+         cybrom::iostreamnew obj;
+}
 
 
