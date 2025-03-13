@@ -2032,5 +2032,66 @@ int main() {
     }
     
 }
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+#include <stack>
+class stacks{
+    public: int  *arr;
+    int n,top;
+    stacks(int s){
+        n=s;
+        arr=new int[n];
+        top=-1;
+    }
+    void pushs(int v){
+        if(top==n-1){
+            cout<<"overflow";
+            return ;
+        }
+        top++;
+        arr[top]=v;
+    }
+    int pops(){
+        if(top==-1){
+            cout<<"underflow";
+            return 0;
+        }
+        return top--;
+    }
+    int tops(){
+        if(top==-1){
+            cout<<"there are no element";
+            return 0;
+        }
+        return arr[top];
+    }
+    
+};
+
+          
+              
+int main() {
+   int s,v;
+   cout<<"enter size of array\n";
+   cin>>s;
+   stacks st(s);
+   for(int i=1; i<=s; i++){
+       cout<<"enter the value\n";
+       cin>>v;
+       st.pushs(v);
+   }
+//   while (st.top!=-1){
+//       cout<<st.tops()<<"\t";
+//       st.pops();
+//   }
+ cout<<"\nAfter pushs:";
+   st.pushs(6);
+   cout<<st.tops();
+   cout<<"\nAfter pops:";
+   st.pops();
+   cout<<st.tops();
+   
+}
 
 
