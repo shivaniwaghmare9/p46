@@ -915,6 +915,15 @@ cin>>option;
         }
 }
 }
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+int num;
+cout<<"enter the number";
+cin>>num;
+(num>0)?cout<<"positive":(num<0)?cout<<"negative":cout<<"zero";
+}
 
 
 
