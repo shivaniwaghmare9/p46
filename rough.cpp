@@ -735,8 +735,8 @@ int main() {
 // Online C++ compiler to run C++ program online
 #include <iostream>
 using namespace std;
-i
-nt main() {
+
+int main() {
     int time=20;
     (time>12)?
     cout<<"ge": cout<<"gm";
@@ -832,10 +832,16 @@ cin>>option;
             
         }
         else
-        {// Online C++ compiler to run C++ program online
+        {
+            cout<<"no";
+        }
+    }
+}   
+// Online C++ compiler to run C++ program online
 #include <iostream>
 using namespace std;
-int main() {
+int main() 
+{
     int pass;
     cout<<"enter your password";
     cin>>pass;
@@ -855,11 +861,11 @@ int main() {
         else 
         { 
             cout<<"invalid passward";
-    }
-}
-}
-cout<<"invalid";
         }
+    }
+{
+cout<<"invalid";
+        
     }
 }
 // Online C++ compiler to run C++ program online
