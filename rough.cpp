@@ -941,6 +941,30 @@ int main() {
   }
   cout<<lcm;
 }
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+    int j=0;
+    int arr[]={1,0,2,0,3};
+    for(int i=0; i<5; ++i)
+    {
+        if(arr[i]!=0)
+        {
+            arr[j]=arr[i];
+            j++;
+        }
+    }
+    for(int i=j; i<5; ++i)
+    {
+        arr[i]=0;
+    }
+    for(int i=0; i<5; ++i)
+    {
+        cout<<arr[i];
+      
+    }
+}
      
      
 
