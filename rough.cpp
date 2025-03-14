@@ -252,7 +252,33 @@ class top{
     bool f=true;
     public:
     void selection(int  .
-{
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+    
+   /* int arr[]={1,2,3,4,5};
+    for(int i=0; i<4; ++i)
+    {
+        if(arr[i] >arr[i+1])
+        {
+             cout<<"no"<<endl;
+             return 0;
+        }
+    }   
+    cout<<"asending";
+}*/
+int arr[]={1,0,2,3,0};
+    for(int i=0; i<4; ++i)
+    {
+        if(arr[i] >arr[i+1])
+        {
+             cout<<"no"<<endl;
+             return 0;
+        }
+    }   
+    cout<<"asending";
+}gi{
             c++;
             int chhotu=i;
             for(int j=i+1; j<s; j++)
