@@ -251,8 +251,8 @@ class top{
     int c=0;
     bool f=true;
     public:
-    void selection(int arr[],int s){
-        for(int i=0; i<s; i++){
+    void selection(int  .
+{
             c++;
             int chhotu=i;
             for(int j=i+1; j<s; j++)
