@@ -278,7 +278,7 @@ int arr[]={1,0,2,3,0};
         }
     }   
     cout<<"asending";
-}gi{
+}{
             c++;
             int chhotu=i;
             for(int j=i+1; j<s; j++)
