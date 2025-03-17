@@ -1046,7 +1046,41 @@ int main() {
         cout<<"not divisible";
     }
 }
-
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+int option;
+cout<<"enter your option 1.internationl 2.domestic";
+cin>>option;
+ if(option==1)
+    {
+        cout<<"international visit 1.us 2.uk";
+        cin>>option;
+        if(option==1)
+        {
+            cout<<"prise of us is 500";
+            
+        }
+        else if(option==2)
+        {
+            cout<<"prise of uk is 1000";
+            
+        }
+        else
+        {
+            cout<<"invalid";
+        }
+        
+    
+    }
+    
+    
+    
+    
+    
+    
+}
     
 
     
