@@ -1032,3 +1032,21 @@ int main() {
     
 
 
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+    int number=8;
+    if(number%2==0)
+    {
+        cout<<"divisible";
+    }
+    else
+    {
+        cout<<"not divisible";
+    }
+}
+
+    
+
+    
