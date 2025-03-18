@@ -1227,12 +1227,141 @@ cin>>option;
     
 }
 }
-  
+  // Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+int option;
+cout<<"enter your option 1.internationl 2.domestic";
+cin>>option;
+ if(option==1)
+    {
+        cout<<"international visit 1.us 2.uk";
+        cin>>option;
+        if(option==1)
+        {
+            cout<<"prise of us is 500";
+            
+        }
+        else if(option==2)
+        {
+            cout<<"prise of uk is 1000";
+            
+        }
+        else
+        {
+            cout<<"invalid";
+        }
+        
+    
+    }
+    
+    
+    
+    
+    
+    
+}_GLIBCXX11_USE_C99_STDL
 } 
     
+   // Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+    int pass;
+    cout<<"enter your password";
+    cin>>pass;
+    if(pass==1234)
+    {
+        cout<<"open";
+        
+    }
+    else 
+     {
+        cout<<" invalid password try again";
+        cin>>pass;
+        if (pass==1234)
+        {
+            cout<<"open";
+        }
+        else 
+        { 
+            cout<<"invalid passward card block";
+            cin>>pass;
+            if (pass==1234)
+            {
+                cout<<"try again";
+            }
+            else
+            {
+                cout<<"card block";
+            }
+    }
+}
+}
+
+
+
+
+    
+
+ 
+    
+    // Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+    int pass;
+    cout<<"enter your password";
+    cin>>pass;
+    if(pass==1234)
+    {
+        cout<<"open";
+        
+    }
+    else 
+     {
+        cout<<" invalid password try again";
+        cin>>pass;
+        if (pass==1234)
+        {
+            cout<<"open";
+        }
+        else 
+        { 
+            cout<<"invalid passward card block";
+            cin>>pass;
+            if (pass==1234)
+            {
+                cout<<"try again";
+            }
+            else
+            {
+                cout<<"card block";
+            }
+    }
+}// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+int num;
+cout<<"enter the number";
+cin>>num;
+(num>0)?cout<<"positive":(num<0)?cout<<"negative":cout<<"zero";
+
     
     
+
     
+}
+}
+
+
+
+
+    
+
+
 
     
     
