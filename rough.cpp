@@ -1128,7 +1128,39 @@ int main() {
         cout<<"invalid";
     }
 }
-    
+   // Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+  string str1="now";
+  string str2="won";
+  
+  if(str1.length()!=str2.length()){
+      cout<<"not an anagram";
+      return 0;
+  }
+  for(int i=0; i<str1.length(); i++){
+  bool found=false;
+      for(int j=0; j<str2.length(); ++j){
+          if(str1[i]==str2[j]){
+              str2[j]='#';
+              found=true;
+              break;
+          }
+          
+      }
+  if(!found){
+      cout<<"not anagram";
+      return 0;
+  }
+  }
+  cout<<"anagram";
+  return 0;
+  
+  
+  
+  
+} 
     
     
     
