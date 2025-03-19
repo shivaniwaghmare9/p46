@@ -1352,6 +1352,20 @@ cin>>num;
     
     
 
+using namespace std;
+int main() {
+// ()? true false ternary operator
+int a=10;
+int b=20;
+// (a>b)?cout<<"a is greater":cout<<"b is greater";
+// (a!=b)?cout<<"true":cout<<"false";
+// (a>=b)?cout<<"true":cout<<"false";
+// (a<=b)?cout<<"true":cout<<"false";
+
+}
+
+++
+
     
 }
 }
