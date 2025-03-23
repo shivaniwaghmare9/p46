@@ -1349,7 +1349,21 @@ int main() {
       cout<<endl;
   }
 }
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+int year;
+if((year%4==0 && year%1001==0 ) || (year%400==0))
+{
+    cout<<"leap";
+}
+else
+{
+    cout<<"not a leap year";
+}
 
+}
     
 
 
