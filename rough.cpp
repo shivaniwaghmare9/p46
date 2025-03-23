@@ -1255,13 +1255,6 @@ cin>>option;
         
     
     }
-    
-    
-    
-    
-    
-    
-}_GLIBCXX11_USE_C99_STDL
 } 
     
    // Online C++ compiler to run C++ program online
@@ -1299,15 +1292,7 @@ int main() {
     }
 }
 }
-
-
-
-
-    
-
- 
-    
-    // Online C++ compiler to run C++ program online
+// Online C++ compiler to run C++ program online
 #include <iostream>
 using namespace std;
 int main() {
@@ -1340,35 +1325,35 @@ int main() {
                 cout<<"card block";
             }
     }
-}// Online C++ compiler to run C++ program online
+}
+}
+// Online C++ compiler to run C++ program online
 #include <iostream>
 using namespace std;
 int main() {
-int num;
-cout<<"enter the number";
-cin>>num;
-(num>0)?cout<<"positive":(num<0)?cout<<"negative":cout<<"zero";
-
-    
-    
-
-using namespace std;
-int main() {
-// ()? true false ternary operator
-int a=10;
-int b=20;
-// (a>b)?cout<<"a is greater":cout<<"b is greater";
-// (a!=b)?cout<<"true":cout<<"false";
-// (a>=b)?cout<<"true":cout<<"false";
-// (a<=b)?cout<<"true":cout<<"false";
-
+    int a=0;
+  for(int r=1; r<=9; ++r) 
+  {
+      (r<=5)?a++:a--;
+      for( int c=1; c<=9; ++c)
+   {
+          if(c>=6-a && c<=4+a)
+         {
+          cout<<"*";    
+          }
+          else
+          {
+              cout<<" ";
+          }
+      }
+      cout<<endl;
+  }
 }
 
-++
-
     
-}
-}
+
+
+
 
 
 
