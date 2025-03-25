@@ -2215,6 +2215,43 @@ int main() {
     }
 }
 }
+// Online C++ compiler to run C++ program online
+//==============================(self refence class)========================================================================================
+#include <iostream>
+using namespace std;
+class node
+{
+    public:int data;
+    node *left;
+    node *right;
+    public:node(int value)
+    {
+        data=value;
+        left=NULL;
+        right=NULL;
+    }
+    
+};
+int main(){
+    node *root=new node(10);
+    root->left=new node(20);
+    root->right=new node(30);
+    cout<<"\npreorder\n";
+    cout<<root->data<<"\t";
+    cout<<root->left->data<<"\t";
+    cout<<root->right->data;
+    cout<<"\ninorder\n";
+    cout<<root->left->data<<"\t";
+    cout<<root->data<<"\t";
+    cout<<root->right->data;
+    cout<<"\npostorder\n";
+    cout<<root->left->data<<"\t";
+    cout<<root->right->data<<"\t";
+    cout<<root->data;
+    
+}
+      
+       
 
 
 
