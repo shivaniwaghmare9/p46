@@ -2248,8 +2248,129 @@ int main(){
     cout<<root->left->data<<"\t";
     cout<<root->right->data<<"\t";
     cout<<root->data;
+}
+
+// Online C++ compiler to run C++ program online
+//==============================(self refence class with function)========================================================================================
+#include <iostream>
+using namespace std;
+class node
+{
+    public:int data;
+    node *left;
+    node *right;
+    public:node(int value)
+    {
+        data=value;
+        left=NULL;
+        right=NULL;
+    }
+    
+};
+void preorder(node *root)
+{
+    if(root==NULL)
+    {
+        return;
+    }
+    cout<<root->data<<"\t";
+    cout<<root->left->data<<"\t";
+    cout<<root->right->data;
+}
+void inorder(node *root)
+{
+    if(root==NULL)
+    {
+        return;
+    }
+    cout<<root->left->data<<"\t";
+    cout<<root->data<<"\t";
+    cout<<root->right->data;
+}
+void postorder(node *root)
+{
+    if(root==NULL)
+    {
+        return;
+    }
+    cout<<root->left->data<<"\t";
+    cout<<root->right->data<<"\t";
+    cout<<root->data;
+}
+int main(){
+    node *root=new node(10);
+    root->left=new node(20);
+    root->right=new node(30);
+    cout<<"\npreorder\n";
+    preorder(root);
+    cout<<"\ninorder\n";
+    inorder(root);
+     cout<<"\npostorder\n";
+     postorder(root);
     
 }
+      
+  // Online C++ compiler to run C++ program online
+//==============================(self reference class with function)========================================================================================
+#include <iostream>
+using namespace std;
+class node
+{
+    public:int data;
+    node *left;
+    node *right;
+    public:node(int value)
+    {
+        data=value;
+        left=NULL;
+        right=NULL;
+    }
+    
+};
+void preorder(node *root)
+{
+    if(root==NULL)
+    {
+        return;
+    }
+    cout<<root->data<<"\t";
+    preorder(root->left);
+    preorder(root->right);
+}
+void inorder(node *root)
+{
+    if(root==NULL)
+    {
+        return;
+    }
+    inorder(root->left);
+    cout<<root->data<<"\t";
+    inorder(root->right);
+}
+void postorder(node *root)
+{
+    if(root==NULL)
+    {
+        return;
+    }
+    postorder(root->left);
+    postorder(root->right);
+    cout<<root->data<<"\t";
+}
+int main(){
+    node *root=new node(10);
+    root->left=new node(20);
+    root->right=new node(30);
+    cout<<"\npreorder\n";
+    preorder(root);
+    cout<<"\ninorder\n";
+    inorder(root);
+     cout<<"\npostorder\n";
+     postorder(root);
+    
+}
+      
+            
       
        
 
