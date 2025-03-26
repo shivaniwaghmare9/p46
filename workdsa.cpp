@@ -74,3 +74,51 @@ int main() {
      cout<<"\npostorder\n";
     postorder(root);
 }
+// Online C++ compiler to run C++ program online
+//============================namespace ke andar namespace =============================================================
+#include <iostream>
+using namespace std;
+namespace cybrom
+{
+    void student()
+    {
+        cout<<"cybrom student\n";
+    }
+    namespace bhopal
+    {
+        void student()
+        {
+            cout<<"bhopal student\n";
+        }
+    }
+    void show()
+    {
+        cout<<"first program\n";
+    }
+    class iostreamnew
+    {
+        public:void show()
+        {
+            cout<<"class example\n";
+        }
+    }
+    coutnew;
+    
+}
+
+
+
+using namespace cybrom;
+int main()
+{
+    bhopal::student();
+    student();
+    show();
+    coutnew.show();
+    iostreamnew obj;
+    obj.show();
+    
+}
+
+  
+  
