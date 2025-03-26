@@ -120,5 +120,76 @@ int main()
     
 }
 
+// Online C++ compiler to run C++ program online
+//================================array template======================================================================================
+#include <iostream>
+using namespace std;
+#include <array>
+#include <algorithm>
+int main() {
+   array<int ,5>arr{2,3,1,4,5};
+   array<double,3>arr2{6.7,3.5,4.3};
+   sort(arr.begin(),arr.end());
+   for(auto p:arr)
+   {
+       cout<<p<<"\t";
+   }
+   cout<<"\n";
+   sort(arr2.begin(),arr2.end());
+   for(auto p1:arr2)
+   {
+       cout<<p1<<"\t";
+   }
+   cout<<"\n";
+   cout<<"arr front="<<arr.front()<<"\n";
+   cout<<"arr2 front="<<arr2.front()<<"\n";
+   
+   cout<<"arr back="<<arr.back()<<"\n";
+   cout<<"arr2 back="<<arr2.back();
+}
+// Online C++ compiler to run C++ program online
+//================================array template======================================================================================
+#include <iostream>
+using namespace std;
+#include <array>
+#include <algorithm>
+int main() {
+  array<int,4>arr{41,20,31,12};
+ sort(arr.begin(),arr.end());
+ 
+  for(auto p:arr)
+  {
+      cout<<p<<"\t";
+  }
+  cout<<"\n";
+  cout<<"size of arr="<<arr.size()<<"\n";
+  cout<<"second highest value of arr\n";
+  cout<<arr[2];
+   
+}
+// Online C++ compiler to run C++ program online
+//================================array template swapping======================================================================================
+#include <iostream>
+using namespace std;
+#include <array>
+
+int main() {
+  array<int,4>arr{41,20,31};
+  array<int,4>arr2{21,29,12,3};
+  arr.swap(arr2);
+  cout<<"\narray1\n";
+  for(auto p:arr)
+  {
+      cout<<p<<"\t";
+  }
+  cout<<"\narray2\n";
+  for(auto p1:arr2)
+  {
+      cout<<p1<<"\t";
+  }
+  
+  
+   
+}
   
   
