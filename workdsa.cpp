@@ -336,5 +336,204 @@ int main() {
     
    
 }
+// Online C++ compiler to run C++ program online
+//==========================VECTOR======================================================================================
+#include <iostream>
+using namespace std;
+#include <vector>
+
+int main() {
+    vector<int>v;
+    int n,b;
+    cout<<"how many value enter\n";
+    cin>>n;
+    for(int i=1; i<=n; i++)
+    {
+        cout<<"enter value\n";
+        cin>>b;
+        v.push_back(b);
+        
+    }
+    for(auto p:v)
+    {
+        cout<<p<<"\t";
+    }
+    cout<<"\nAfter deletion\n";
+    v.pop_back();
+    for(auto p:v)
+    {
+        cout<<p<<"\t";
+    }
+}
+// Online C++ compiler to run C++ program online
+//==========================VECTOR INSERTING VALUE======================================================================================
+#include <iostream>
+using namespace std;
+#include <vector>
+#include <iterator>
+int main()
+{
+    vector<int>v;
+    int n,b;
+    cout<<"how many values enter\n";
+    cin>>n;
+    for(int i=1; i<=n; i++)
+    {
+        cout<<"enter value\n";
+        cin>>b;
+        v.push_back(b);
+        
+    }
+    for(auto p:v)
+    {
+        cout<<p<<"\t";
+    }
+    cout<<"\nAfter deletion\n";
+    v.pop_back();
+    for(auto p:v)
+    {
+        cout<<p<<"\t";
+    }
+    //inserting the value from begin
+    vector<int>::iterator it=v.begin();
+    v.insert(it,30);
+    v.insert(it+2,50);
+    cout<<"\nAfter begin  inserting\n";
+    for(auto p:v)
+    {
+        cout<<p<<"\t";
+    }
+    vector<int>::iterator itt=v.end();
+    v.insert(itt-1,60);
+    v.insert(itt-2,50);
+    cout<<"\nAfter end inserting\n";
+    for(auto p:v)
+    {
+        cout<<p<<"\t";
+    }
+
+}
+// Online C++ compiler to run C++ program online
+//==========================VECTOR ERASE(DELETION) VALUE======================================================================================
+#include <iostream>
+using namespace std;
+#include <vector>
+#include <iterator>
+int main()
+{
+    vector<int>v;
+    int n,b;
+    cout<<"how many values enter\n";
+    cin>>n;
+    for(int i=1; i<=n; i++)
+    {
+        cout<<"enter value\n";
+        cin>>b;
+        v.push_back(b);
+        
+    }
+    for(auto p:v)
+    {
+        cout<<p<<"\t";
+    }
+    cout<<"\nAfter deletion\n";
+    v.pop_back();
+    for(auto p:v)
+    {
+        cout<<p<<"\t";
+    }
+    //ERASE the value from begin
+    vector<int>::iterator it=v.begin();
+    v.erase(it+2);
+    v.erase(it);
+    cout<<"\nAfter begin  erase\n";
+    for(auto p:v)
+    {
+        cout<<p<<"\t";
+    }
+    vector<int>::iterator itt=v.end();
+    v.erase(itt-1);
+    v.erase(itt-2);
+    cout<<"\nAfter end erase\n";
+    for(auto p:v)
+    {
+        cout<<p<<"\t";
+    }
+    
+}
+// Online C++ compiler to run C++ program online
+//==========================VECTOR ERASE(DELETION) VALUE======================================================================================
+#include <iostream>
+using namespace std;
+#include <vector>
+#include <iterator>
+#include<algorithm>
+int main()
+{
+    vector<int>v;
+    int n,b;
+    cout<<"how many values enter\n";
+    cin>>n;
+    for(int i=1; i<=n; i++)
+    {
+        cout<<"enter value\n";
+        cin>>b;
+        v.push_back(b);
+        
+    }
+    for(auto p:v)
+    {
+        cout<<p<<"\t";
+    }
+    cout<<"\nAfter deletion\n";
+    v.pop_back();
+    for(auto p:v)
+    {
+        cout<<p<<"\t";
+    }
+    //ERASE the value from begin
+    vector<int>::iterator it=v.begin();
+    v.erase(it+2);
+    v.erase(it);
+    cout<<"\nAfter begin  erase\n";
+    for(auto p:v)
+    {
+        cout<<p<<"\t";
+    }
+    cout<<"\nerase value based\n";
+    int x;
+    cout<<"\nenter the value for search\n";
+    cin>>x;
+    auto j=find(v.begin(),v.end(),x);
+    cout<<*j;
+    cout<<"\n";
+    v.erase(j);
+    for(auto p:v)
+    {
+        cout<<p<<"\t";
+    }
+    
+    // vector<int>::iterator itt=v.end();
+    // v.erase(itt-1);
+    // v.erase(itt-2);
+    // cout<<"\nAfter end erase\n";
+    // for(auto p:v)
+    // {
+    //     cout<<p<<"\t";
+    // }
+    //erase()
+}
+
+
+    
+
+
+
+    
+
+
+
+    
+
   
   
