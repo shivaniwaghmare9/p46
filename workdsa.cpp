@@ -306,5 +306,35 @@ int main() {
         cout<<p<<"\t";
     }
 }
+// Online C++ compiler to run C++ program online
+//==================================vector==================================================================================
+#include <iostream>
+using namespace std;
+#include <vector>
+// #include <algorithm>
+int main() {
+    vector<int>v1;
+    int n,b;
+    cout<<"how many element\n";
+    cin>>n;
+    for(int i=1; i<=n; i++)
+    {
+        cout<<"enter value\n";
+        cin>>b;
+        v1.push_back(b);
+    }
+    for(auto p:v1)
+    {
+        cout<<p<<"\t";
+    }
+    cout<<"\n After deletion\n";
+    v1.pop_back();
+     for(auto p:v1)
+    {
+        cout<<p<<"\t";
+    }
+    
+   
+}
   
   
