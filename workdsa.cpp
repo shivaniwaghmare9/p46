@@ -751,6 +751,150 @@ int main()
    }
 }
 
+// Online C++ compiler to run C++ program online
+//==========================VECTOR (addition of two vector different size) ======================================================================================
+#include <iostream>
+using namespace std;
+#include <vector>
+int main()
+{
+   int n1,n2;
+   cout<<"enter the size of vector1:";
+   cin>>n1;
+   cout<<"\nenter the size of vector2:";
+   cin>>n2;
+   
+   vector<int>v1(n1);
+   vector<int>v2(n2);
+   vector<int>sum(max(n1,n2));
+   for(int i=0; i<n1; i++)
+   {
+       cout<<"\nenter the element of v1:";
+       cin>>v1[i];
+   }
+   for(int i=0; i<n2; i++)
+   {
+        cout<<"\nenter the element of v2:";
+       cin>>v2[i];
+   }
+   for(int i=0; i<sum.size(); i++)
+   {
+       if(i<v1.size())
+       {
+          sum[i]+=v1[i];
+       }
+       if(i<v2.size())
+       {
+           sum[i]+=v2[i];
+       }
+   }
+   cout<<"\n addition v1 and v2\n";
+   for(int i=0; i<sum.size(); i++)
+   {
+       cout<<sum[i]<<"\t";
+   }
+}
+
+// Online C++ compiler to run C++ program online
+//==========================VECTOR (vector sum and max value) ======================================================================================
+#include <iostream>
+using namespace std;
+#include <vector>
+int main()
+{
+   int n1,n2;
+   cout<<"enter the size of vector1:";
+   cin>>n1;
+   cout<<"\nenter the size of vector2:";
+   cin>>n2;
+   
+   vector<int>v1(n1);
+   vector<int>v2(n2);
+ 
+   for(int i=0; i<n1; i++)
+   {
+       cout<<"\nenter the element of v1:";
+       cin>>v1[i];
+   }
+   for(int i=0; i<n2; i++)
+   {
+        cout<<"\nenter the element of v2:";
+       cin>>v2[i];
+   }
+   int sumv1=0;
+   int sumv2=0;
+   for(int i=0; i<n1; i++)
+   {
+       sumv1+=v1[i];
+   }
+   cout<<"\nsum of v1="<<sumv1<<"\n";
+   for(int i=0; i<n2; i++)
+   {
+       sumv2+=v2[i];
+   }
+   cout<<"\nsum of v2="<<sumv2<<"\n";
+   if(sumv1>sumv2)
+   {
+       cout<<"\nmaximum value of v1 vector:"<<sumv1<<"\n";
+   }
+   else if(sumv2>sumv1)
+   {
+       cout<<"\n maximum value of v2 vector:"<<sumv2<<"\n";
+   }
+   else
+   {
+       cout<<"\nboth vector are equal:"<<"\n";
+   }
+}
+
+// Online C++ compiler to run C++ program online
+//==========================VECTOR (vector sum defferent size) ======================================================================================
+#include <iostream>
+using namespace std;
+#include <vector>
+int main()
+{
+  
+  vector<int>v1{1,2,3};
+  vector<int>v2{3,4,5,6};
+  int a=0; 
+  int b=0;
+  for(int i=0; i<v1.size();i++)
+  {
+      a=a*10+v1[i];
+  }
+  for(int i=0; i<v2.size();i++)
+  {
+      b=b*10+v2[i];
+  }
+  cout<<a+b<<"\t";
+  
+}
+
+// Online C++ compiler to run C++ program online
+//==========================VECTOR (vector sum defferent size) ======================================================================================
+#include <iostream>
+using namespace std;
+#include <vector>
+int main()
+{
+  
+  vector<int>v1{1,2,3};
+  vector<int>v2{3,4,5,6};
+  int a=0; 
+  int b=0;
+  for(int i=0; i<v1.size();i++)
+  {
+      a=a*10+v1[i];
+  }
+  for(int i=0; i<v2.size();i++)
+  {
+      b=b*10+v2[i];
+  }
+  cout<<a+b<<"\t";
+  
+}
+
     
 
 
