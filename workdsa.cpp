@@ -609,6 +609,78 @@ int main()
    
 }
 
+// Online C++ compiler to run C++ program online
+//==========================VECTOR (pair) ======================================================================================
+#include <iostream>
+using namespace std;
+#include <vector>
+int main()
+{
+    pair<int,string>p{101,"shiv"};  //direct pair
+    p=make_pair(102,"shiva");
+    cout<<p.first<<":"<<p.second;
+    
+    //vector ke andar pair
+    vector<pair<int,string>>v;
+    int rollno,n;
+    string name;
+    cout<<"\nhow many data stored\n";
+    cin>>n;
+    for(int i=1; i<=n; i++)
+    {
+        cout<<"\nenter the name:";
+        cin>>name;
+        cout<<"\nenter the rollno:";
+        cin>>rollno;
+       // v.push_back(make_pair(rollno,name));
+        v.push_back({rollno,name});
+    }
+    cout<<"\nstored data\n";
+    for(int i=0; i<v.size(); i++)
+    {
+        cout<<v[i].first<<":"<<v[i].second<<"\n";
+    }
+
+}
+
+// Online C++ compiler to run C++ program online
+//==========================VECTOR (tuple) ======================================================================================
+#include <iostream>
+using namespace std;
+#include <vector>
+int main()
+{
+    tuple<int,string,int>p{101,"shiv",23};  //direct pair
+    p=make_tuple(102,"shiva",21);
+    cout<<"rollno:"<<get<0>(p)<<"\n";
+    cout<<"name:"<<get<1>(p)<<"\n";
+    cout<<"name:"<<get<2>(p)<<"\n";
+    
+    //vector ke andar tuple
+    vector<tuple<int,string,int>>v;
+    int rollno,age,n;
+    string name;
+    cout<<"\nhow many data stored\n";
+    cin>>n;
+    for(int i=1; i<=n; i++)
+    {
+        cout<<"\nenter the name:";
+        cin>>name;
+        cout<<"\nenter the rollno:";
+        cin>>rollno;
+        cout<<"\nenter the age:";
+        cin>>age;
+       // v.push_back(make_tuple(rollno,name,age));
+        v.push_back({rollno,name,age});
+    }
+    cout<<"\nstored data\n";
+    for(int i=0; i<v.size(); i++)
+    {
+        cout<<get<0>(v[i])<<":"<<get<1>(v[i])<<":"<<get<2>(v[i])<<"\n";
+    }
+    
+    
+}
 
     
 
