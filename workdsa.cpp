@@ -523,6 +523,99 @@ int main()
     // }
     //erase()
 }
+// Online C++ compiler to run C++ program online
+//==========================VECTOR  reverse and max min ======================================================================================
+#include <iostream>
+using namespace std;
+#include <vector>
+#include <iterator>
+#include<algorithm>
+int main()
+{
+    vector<int>v;
+    int n,b;
+    cout<<"how many values enter\n";
+    cin>>n;
+    for(int i=1; i<=n; i++)
+    {
+        cout<<"enter value\n";
+        cin>>b;
+        v.push_back(b);
+        
+    }
+    for(auto p:v)
+    {
+        cout<<p<<"\t";
+    }
+    cout<<"\nreverse value\n";
+    reverse(v.begin(),v.end());
+    for(auto p:v)
+    {
+        cout<<p<<"\t";
+    }
+    
+   cout<<"\nmax value find\n"<<*max_element(v.begin(),v.end());
+   cout<<"\nmin value find\n"<<*min_element(v.begin(),v.end());
+
+}
+// Online C++ compiler to run C++ program online
+//==========================VECTOR  reverse and max min and empty and clear ======================================================================================
+#include <iostream>
+using namespace std;
+#include <vector>
+#include <iterator>
+#include<algorithm>
+int main()
+{
+    vector<int>v;
+    int n,b;
+    cout<<"how many values enter\n";
+    cin>>n;
+    for(int i=1; i<=n; i++)
+    {
+        cout<<"enter value\n";
+        cin>>b;
+        v.push_back(b);
+        
+    }
+    for(auto p:v)
+    {
+        cout<<p<<"\t";
+    }
+    cout<<"\nreverse value\n";
+    reverse(v.begin(),v.end());
+    for(auto p:v)
+    {
+        cout<<p<<"\t";
+    }
+    
+  cout<<"\nmax value find\n"<<*max_element(v.begin(),v.end());
+  cout<<"\nmin value find\n"<<*min_element(v.begin(),v.end());
+   
+   cout<<"\n";
+   if(v.empty())
+   {
+       cout<<"\n vector is empty\n";
+   }
+   else
+   {
+       cout<<"not empty\n";
+   }
+   v.clear();
+   if(v.empty())
+   {
+       cout<<"\nveator is empty";
+   }
+   
+}
+
+
+    
+
+
+
+    
+
 
 
     
