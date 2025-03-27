@@ -678,8 +678,77 @@ int main()
     {
         cout<<get<0>(v[i])<<":"<<get<1>(v[i])<<":"<<get<2>(v[i])<<"\n";
     }
-    
-    
+}
+
+// Online C++ compiler to run C++ program online
+//==========================VECTOR (2d vector) ======================================================================================
+#include <iostream>
+using namespace std;
+#include <vector>
+int main()
+{
+    vector<vector<int>>v1;
+    int row,col,v;
+    cout<<"\nenater no of row:";
+    cin>>row;
+    cout<<"\nenter no of col:";
+    cin>>col;
+    for(int i=1; i<=row; i++)
+    {
+        vector<int>v2;
+     for(int j=1; j<=col; j++)
+     {
+         cout<<"\nenter the values:";
+         cin>>v;
+         v2.push_back(v);
+     }
+     v1.push_back(v2);
+    }
+    cout<<"\nstored values are\n";
+    for(int i=0; i<v1.size(); i++)
+    {
+        for(int j=0; j<v1[i].size(); j++)
+        {
+            cout<<v1[i][j]<<"\t";
+        }
+        cout<<"\n";
+    }
+  
+}
+
+// Online C++ compiler to run C++ program online
+//==========================VECTOR (addition of two vector) ======================================================================================
+#include <iostream>
+using namespace std;
+#include <vector>
+int main()
+{
+   int n;
+   cout<<"enter the size of vector\n";
+   cin>>n;
+   
+   vector<int>v1(n);
+   vector<int>v2(n);
+   vector<int>sum(n);
+   for(int i=0; i<n; i++)
+   {
+       cout<<"enter the element of v1:";
+       cin>>v1[i];
+   }
+   for(int i=0; i<n; i++)
+   {
+        cout<<"enter the element of v2:";
+       cin>>v2[i];
+   }
+   for(int i=0; i<n; i++)
+   {
+       sum[i]=v1[i]+v2[i];
+   }
+   cout<<"\n addition v1 and v2\n";
+   for(int i=0; i<n; i++)
+   {
+       cout<<sum[i]<<"\t";
+   }
 }
 
     
