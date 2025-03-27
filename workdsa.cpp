@@ -191,5 +191,120 @@ int main() {
   
    
 }
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+#include <array>
+#include <algorithm>
+int main() {
+    array<int,4>arr{30,12,3,18};
+    array<int,4>arr2{2,30,46,13};
+    sort(arr.begin(),arr.end());
+    for(auto p:arr)
+    {
+        cout<<p<<"\t";
+    }
+    cout<<"\nAfter sorting\n";
+    sort(arr2.begin(),arr2.end());
+    for(auto p1:arr2)
+    {
+        cout<<p1<<"\t";
+    }
+    cout<<"\nfront="<<arr.front()<<"\n";
+    cout<<"front="<<arr2.front()<<"\n";
+    cout<<"\nback="<<arr.back()<<"\n";
+    cout<<"back="<<arr2.back()<<"\n";
+}
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+#include <array>
+#include <algorithm>
+int main() {
+    array<int,4>arr{30,12,3,18};
+    array<int,4>arr2{2,30,46,13};
+    sort(arr.begin(),arr.end());
+    for(auto p:arr)
+    {
+        cout<<p<<"\t";
+    }
+    cout<<"\nAfter sorting\n";
+    sort(arr2.begin(),arr2.end());
+    for(auto p1:arr2)
+    {
+        cout<<p1<<"\t";
+    }
+    cout<<"\nfront="<<arr.front()<<"\n";
+    cout<<"front="<<arr2.front()<<"\n";
+    cout<<"\nback="<<arr.back()<<"\n";
+    cout<<"back="<<arr2.back()<<"\n";
+    cout<<"size="<<arr.size()<<"\n";
+    cout<<"second highest value="<<arr[2];
+    cout<<"\nAfetr swappping arr\n";
+    arr.swap(arr2);
+    cout<<"\narr\n";
+    for(auto p:arr)
+    {
+        cout<<p<<"\t";
+    }
+    cout<<"\nAfter swapping\n";
+    
+    for(auto p1:arr2)
+    {
+        cout<<p1<<"\t";
+    }
+}
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+#include <vector>
+// #include <algorithm>
+int main() {
+    vector<int>v1;
+    cout<<v1.size()<<endl;
+    vector<int>v{3,2,4,1,5};
+    // v.push_back(10);
+    // v.push_back(20);
+    // v.push_back(30);
+    
+    for(auto p:v)
+    {
+        cout<<p<<"\t";
+    }
+    cout<<"\n";
+    v[2]=9;
+    for(auto p:v)
+    {
+        cout<<p<<"\t";
+    }
+    cout<<"\n";
+    v.pop_back();
+     for(auto p:v)
+    {
+        cout<<p<<"\t";
+    }
+}
+// Online C++ compiler to run C++ program online
+//==================================vector==================================================================================
+#include <iostream>
+using namespace std;
+#include <vector>
+// #include <algorithm>
+int main() {
+    vector<int>v1(5,10);
+    cout<<v1.size()<<endl;
+    for(auto p:v1)
+    {
+        cout<<p<<"\t";
+    }
+    cout<<"\n";
+    v1[0]=9;
+    v1[2]=12;
+    v1[4]=15;
+    for(auto p:v1)
+    {
+        cout<<p<<"\t";
+    }
+}
   
   
