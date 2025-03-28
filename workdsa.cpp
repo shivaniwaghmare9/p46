@@ -1156,6 +1156,141 @@ int main()
     }
     
 }
+// Online C++ compiler to run C++ program online
+//=============================(forward sinlge list))===================================================================================
+#include <iostream>
+using namespace std;
+#include <forward_list>
+
+int main()
+{
+   forward_list<int>f;
+   f.push_front(34);
+   f.push_front(12);
+   f.push_front(3);
+   f.push_front(2);
+   f.push_front(4);
+   f.push_front(43);
+   forward_list<int>f1;
+   f.push_front(4);
+   f.push_front(2);
+   f.push_front(6);
+   f.push_front(22);
+   f.push_front(41);
+   f.push_front(4);
+   cout<<"\nlist f\n";
+   for(auto p:f)
+   {
+       cout<<p<<"\t";
+   }
+  cout<<"\nAfter deletion\n";
+  f.pop_front();
+   for(auto p:f)
+   {
+       cout<<p<<"\t";
+   }
+   cout<<"\nlist f1\n";
+   for(auto p:f1)
+   {
+       cout<<p<<"\t";
+   }
+  cout<<"\nAfter deletion\n";
+  f.pop_front();
+   for(auto p:f1)
+   {
+       cout<<p<<"\t";
+   }
+   cout<<"After sorting merge\n";
+   f.sort();
+   f1.sort();
+   f.merge(f1);
+   for(auto p:f)
+   {
+       cout<<p<<"\t";
+   }
+   cout<<"\nAfter reverse\n";
+   f.reverse();
+   for(auto p:f)
+   {
+       cout<<p<<"\t";
+   }
+   cout<<"\nAfter unique\n";
+   f.unique();
+   for(auto p:f)
+   {
+       cout<<p<<"\t";
+   }
+   cout<<"\nDistance or size of list\n";
+   cout<<"size="<<distance(f.begin(),f.end());
+}
+// Online C++ compiler to run C++ program online
+//=============================(doubly linked list))===================================================================================
+#include <iostream>
+using namespace std;
+#include <list>
+#include <algorithm>
+int main()
+{
+   list<int>f;
+   f.push_front(34);
+   f.push_front(12);
+   f.push_front(3);
+   f.push_back(2);
+   f.push_front(4);
+   f.push_back(43);
+   
+   cout<<"\nlist f\n";
+   for(auto p:f)
+   {
+       cout<<p<<"\t";
+   }
+  cout<<"\nAfter deletion\n";
+  f.pop_front();
+   for(auto p:f)
+   {
+       cout<<p<<"\t";
+   }
+   cout<<"\nAfter sort\n";
+   f.sort();
+   for(auto p:f)
+   {
+       cout<<p<<"\t";
+   }
+   cout<<"\nAfter erase\n";
+   auto it=f.begin();
+   advance (it,2);
+   f.erase(it);
+   for(auto p:f)
+   {
+       cout<<p<<"\t";
+   }
+   cout<<"\nAfter inserting\n";
+   auto it1=f.begin();
+   advance (it1,2);
+   f.insert(it1,6);
+   for(auto p:f)
+   {
+       cout<<p<<"\t";
+   }
+   cout<<"\nAfter update\n";
+   auto it2=f.begin();
+   advance (it2,4);
+   *it2=40;
+   for(auto p:f)
+   {
+       cout<<p<<"\t";
+   }
+   cout<<"\nAfter searching\n";
+   auto s=find(f.begin(),f.end(),4);
+   if(s!=f.end())
+   {
+       cout<<"found="<<*s;
+   }
+   else
+   {
+       cout<<"\n not found";
+   }
+}
 
     
 
