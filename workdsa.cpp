@@ -895,6 +895,268 @@ int main()
   
 }
 
+// Online C++ compiler to run C++ program online
+//==========================VECTOR (lambda function)======================================================================================
+#include <iostream>
+using namespace std;
+#include <vector>
+#include <algorithm>
+int main()
+{
+  vector<int>v{3,5,6,4,2,1,8};
+  sort(v.begin(),v.end(),less<int>());
+  for(auto p:v)
+  {
+      cout<<p<<"\t";
+  }
+  cout<<"\n";
+  sort(v.begin(),v.end(),greater<int>());
+  for(auto p:v)
+  {
+      cout<<p<<"\t";
+  }
+  cout<<"\n";
+  sort(v.begin(),v.end(),[](int a,int b){return a>b;});
+  for(auto p:v)
+  {
+      cout<<p<<"\t";
+  }
+  cout<<"\n";
+  cout<<[](int a){return a+10;}(6)<<"\n";
+  cout<<[](int a,int b){return a>b;} (2,3)<<"\n";  //true 1,false 0
+  auto k=[](int a) {return a*a;};
+  cout<<k(9);
+ }
+
+ // Online C++ compiler to run C++ program online
+//=============================STACK(STATIC)===================================================================================
+#include <iostream>
+using namespace std;
+#include<stack>
+int main() {
+   stack<int>st;
+   st.push(28);
+   st.push(8);
+   st.push(36);
+  st.push(12);
+   st.push(42);
+   while(!st.empty())
+   {
+       cout<<st.top()<<"\t";
+       st.pop();
+   }
+}
+// Online C++ compiler to run C++ program online
+//=============================STACK(DYNAMIC)===================================================================================
+#include <iostream>
+using namespace std;
+#include<stack>
+int main() {
+   stack<int>st;
+  int n, a;
+  cout<<"enter how many values\n";
+  cin>>n;
+  for(int i=1; i<=n; i++)
+  {
+      cout<<"enter value\n";
+      cin>>a;
+      st.push(a);
+  }
+  while(!st.empty())
+  {
+      cout<<st.top()<<"\t";
+      st.pop();
+  }
+}
+// Online C++ compiler to run C++ program online
+//=============================STACK(DYNAMIC SMALLEST VALUE)===================================================================================
+#include <iostream>
+using namespace std;
+#include<stack>
+int main() {
+   stack<int>st;
+  int n, a;
+  cout<<"enter how many values\n";
+  cin>>n;
+  for(int i=1; i<=n; i++)
+  {
+      cout<<"enter value\n";
+      cin>>a;
+      st.push(a);
+  }
+  int x=st.top();
+  while(!st.empty())
+  {
+     if(x<=st.top())
+     {
+         x=st.top();
+     }
+     st.pop();
+  }
+  cout<<"result:"<<x<<"\t";
+}
+// Online C++ compiler to run C++ program online
+//=============================STACK(DYNAMIC greatest VALUE)===================================================================================
+#include <iostream>
+using namespace std;
+#include<stack>
+int main() {
+   stack<int>st;
+  int n, a;
+  cout<<"enter how many values\n";
+  cin>>n;
+  for(int i=1; i<=n; i++)
+  {
+      cout<<"enter value\n";
+      cin>>a;
+      st.push(a);
+  }
+  int x=st.top();
+  while(!st.empty())
+  {
+      if(x<=st.top())
+      {
+          x=st.top();
+      }
+      st.pop();
+  }
+  cout<<"result:"<<x<<"\t";
+}
+// Online C++ compiler to run C++ program online
+//=============================STACK(PARANTHESES)===================================================================================
+#include <iostream>
+using namespace std;
+#include<stack>
+int valid(string s)
+{
+    if(s.size()<=4)
+    {
+        return 0;
+    }
+    else
+    {
+        return 1;
+    }
+}
+int main() 
+{
+   string s;
+   cout<<"enter name\n";
+   cin>>s;
+   bool j=valid(s);
+   if(j)
+   {
+       cout<<"valid";
+   }
+   else
+   {
+       cout<<"invalid";
+   }
+      
+}
+// Online C++ compiler to run C++ program online
+//=============================STACK(PARANTHESES)===================================================================================
+#include <iostream>
+using namespace std;
+#include<stack>
+int valid(string s)
+{
+    if(s.size()<=4)
+    {
+        return 0;
+    }
+    else{
+        return 1;
+    }
+}
+int main()
+{
+    string s;
+    cout<<"enter name:";
+    cin>>s;
+    bool j=valid(s);
+    if(j){
+        cout<<"valid";
+    }
+    else{
+        cout<<"invalid";
+    }
+}
+// Online C++ compiler to run C++ program online
+//=============================STACK(PARANTHESES)===================================================================================
+#include <iostream>
+using namespace std;
+#include<stack>
+bool pvalid(string s)
+{
+    stack<char>stk;
+    bool r=true;
+    for(int i=0; i<s.size();i++)
+    {
+        if(s[i]=='{' || s[i]=='(' || s[i]=='[')
+        {
+            stk.push(s[i]);
+        }
+        else if(s[i]=='}')
+        {
+            if(!stk.empty() && stk.top()=='{')
+            {
+                stk.pop();
+            }
+            else
+            {
+                r=false;
+                break;
+            }
+        }
+        else if(s[i]==')')
+        {
+            if(!stk.empty() && stk.top()=='(')
+            {
+                stk.pop();
+            }
+            else
+            {
+                r=false;
+                break;
+            }
+        }
+        else if(s[i]==']')
+        {
+            if(!stk.empty() && stk.top()=='[')
+            {
+                stk.pop();
+            }
+            else
+            {
+                r=false;
+                break;
+            }
+        }
+    }
+    if(!stk.empty())
+    {
+        return false;
+    }
+    else
+    {
+        return r;
+    }
+}
+
+int main()
+{
+    string s="{[()}";
+    if(pvalid(s))
+    {
+        cout<<"valid";
+    }
+    else{
+        cout<<"invalid";
+    }
+    
+}
+
     
 
 
