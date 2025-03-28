@@ -1291,6 +1291,131 @@ int main()
        cout<<"\n not found";
    }
 }
+// Online C++ compiler to run C++ program online
+//=============================(map))===================================================================================
+#include <iostream>
+using namespace std;
+#include<map>
+int main()
+{
+  map<int,string>mp;
+  mp.insert({102,"hny"});
+  mp.insert({103.,"sny"});
+  mp[89]="raj";
+  mp[12];
+  
+  for(auto p:mp)
+  {
+      cout<<p.first<<":"<<p.second<<"\n";
+  }
+}
+// Online C++ compiler to run C++ program online
+//=============================(frequency count form map))===================================================================================
+#include <iostream>
+using namespace std;
+#include<map>
+void occur(string s)
+{
+    map<char,int>mp;
+    for(int i=0; i<s.size(); i++)
+    {
+        mp[s[i]]++;
+    }
+    for(auto p:mp)
+    {
+        cout<<p.first<<":"<<p.second<<"\n";
+    }
+}
+int main()
+{
+  string s="wellcome";
+  occur(s);
+}
+
+// Online C++ compiler to run C++ program online
+//=============================(map dynamic )===================================================================================
+#include <iostream>
+using namespace std;
+#include<map>
+int main()
+{
+    map<int,string>mp;
+    int roll,n;
+    string name;
+    cout<<"how data record\n";
+    cin>>n;
+    for(int i=1; i<=n; i++)
+    {
+        cout<<"enter the roll:";
+        cin>>roll;
+        cout<<"enter name:";
+        cin>>name;
+        mp.insert({roll,name});
+    }
+    cout<<"\nrecords are\n";
+    for(auto p:mp)
+    {
+        cout<<p.first<<":"<<p.second<<"\n";
+    }
+    cout<<"\nsearching value\n";  //search
+    cout<<"\nenter searching roll no:";
+    cin>>roll;
+    auto k=mp.find(roll);
+    if(k!=mp.end())
+    {
+        cout<<k->first<<":"<<k->second<<"\n";
+    }
+    else
+    {
+        cout<<"not found";
+    }
+    cout<<"\ndelete value\n";   //erase
+    cout<<"\nenter searching delete roll no:";
+    cin>>roll;
+    auto j=mp.find(roll);
+    if(j!=mp.end())
+    {
+        mp.erase(roll);
+    }
+    else
+    {
+        cout<<"not found";
+    }
+    cout<<"\n";
+    for(auto p:mp)
+    {
+        cout<<p.first<<":"<<p.second<<"\n";
+    }
+}
+// Online C++ compiler to run C++ program online
+//=============================(map roman )===================================================================================
+#include <iostream>
+using namespace std;
+#include<unordered_map>
+int rmn(string s)
+{
+    unordered_map<char,int>up{{'I',1},{'V',5},{'X',10}};
+    int r=0;
+    for(int i=0; i<s.size();i++)
+    {
+        if(up[s[i]]<up[s[i+1]])
+        {
+            r=r-up[s[i]];
+        }
+        else
+        {
+            r=r+up[s[i]];
+        }
+    }
+    return r;
+}
+int main()
+{
+    string s="XI";
+    cout<<rmn(s);
+    
+}
+
 
     
 
