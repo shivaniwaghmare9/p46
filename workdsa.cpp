@@ -1415,6 +1415,181 @@ int main()
     cout<<rmn(s);
     
 }
+// Online C++ compiler to run C++ program online
+//=============================(code of self refrencial pre- in -post)===================================================================================
+#include <iostream>
+using namespace std;
+class node{
+    public:int data;
+    node *left;
+    node *right;
+    public:node(int d)
+    {
+    data=d;
+    left=NULL;
+    right=NULL;
+    }
+    
+};
+int main()
+{
+    node *root=new node(10);
+    root->left=new node(20);
+    root->right=new node(30);
+    cout<<"\npreorder\n";
+    cout<<root->data<<"\n";
+    cout<<root->left->data<<"\n";
+    cout<<root->right->data<<"\n";
+    cout<<"\nineorder\n";
+    
+    cout<<root->left->data<<"\n";
+    cout<<root->data<<"\n";
+    cout<<root->right->data<<"\n";
+    cout<<"\npostorder\n";
+    
+    cout<<root->left->data<<"\n";
+    cout<<root->right->data<<"\n";
+    cout<<root->data<<"\n";
+}
+
+// Online C++ compiler to run C++ program online
+//=============================(code of self refrencial pre- in -post with function)===================================================================================
+#include <iostream>
+using namespace std;
+class node
+{
+    public:int data;
+    node *left;
+    node *right;
+    public:node(int d)
+    {
+        data=d;
+        left=NULL;
+        right=NULL;
+    }
+};
+void preorder(node *root)
+{
+    if(root==NULL)
+    {
+        return ;
+    }
+    cout<<root->data<<"\t";
+    preorder(root->left);
+    preorder(root->right);
+}
+void inorder(node *root)
+{
+    if(root==NULL)
+    {
+        return ;
+    }
+    
+    inorder(root->left);
+    cout<<root->data<<"\t";
+    inorder(root->right);
+}
+void postorder(node *root)
+{
+    if(root==NULL)
+    {
+        return ;
+    }
+    
+    postorder(root->left);
+    postorder(root->right);
+    cout<<root->data<<"\t";
+}
+int main()
+{
+    node *root=new node(10);
+    root->left=new node(20);
+    root->right=new node(30);
+    cout<<"\npreorder\n";
+    preorder(root);
+    cout<<"\nineorder\n";
+    inorder(root);
+    cout<<"\npostorder\n";
+    postorder(root);
+}
+
+// Online C++ compiler to run C++ program online
+//=============================(code of self refrencial pre- in -post with function with dynamic)===================================================================================
+#include <iostream>
+using namespace std;
+class node
+{
+    public:int data;
+    node *left;
+    node *right;
+    public:node(int d)
+    {
+        data=d;
+        left=NULL;
+        right=NULL;
+    }
+};
+node *create(node *root)
+{
+    int v;
+    cout<<"enter values:";
+    cin>>v;
+    root=new node(v);
+    if(v==-1)
+    {
+        return NULL;
+    }
+    cout<<"\nenter value of left:"<<v<<"\n";
+    root->left=create(root->left);
+    cout<<"\nenter value of right:"<<v<<"\n";
+    root->right=create(root->right);
+    return root;
+}
+void preorder(node *root)
+{
+    if(root==NULL)
+    {
+        return ;
+    }
+    cout<<root->data<<"\t";
+    preorder(root->left);
+    preorder(root->right);
+}
+void inorder(node *root)
+{
+    if(root==NULL)
+    {
+        return ;
+    }
+    
+    inorder(root->left);
+    cout<<root->data<<"\t";
+    inorder(root->right);
+}
+void postorder(node *root)
+{
+    if(root==NULL)
+    {
+        return ;
+    }
+    
+    postorder(root->left);
+    postorder(root->right);
+    cout<<root->data<<"\t";
+}
+int main()
+{
+    node *root=NULL;
+    root=create(root);
+    cout<<"\npreorder\n";
+    preorder(root);
+    cout<<"\nineorder\n";
+    inorder(root);
+    cout<<"\npostorder\n";
+    postorder(root);
+}
+
+
 
 
     
