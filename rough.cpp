@@ -1418,6 +1418,49 @@ int main() {
      }
  }
 }
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+    cout<<"shivani";
+    cout<<endl;
+int a=1;
+label:
+if(a==1){
+cout<<"aarti";
+cout<<"preeti";
+a++;
+goto label;
+
+}
+
+cout<<"rani";
+
+}
+// Online C++ compiler to run C++ program online
+//keeping first occursion
+#include <iostream>
+using namespace std;
+int main() {
+   int arr[]={10,20,5,9,10};
+   for(int i=0;i<5;++i)
+   {
+       for(int j=i+1;j<5;++j)
+       {
+           if(arr[i]==arr[j])
+           {
+               arr[j]=-1;
+           }
+       }
+   }
+   for(int i=0;i<5;++i)
+   {
+       if(arr[i]!=-1)
+       {
+           cout<<arr[i]<<endl;
+       }
+   }
+}
     
 
 
