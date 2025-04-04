@@ -163,6 +163,203 @@ int main()
     }
     
 }
+//================================================VECTOR====================================================================================================
+// Online C++ compiler to run C++ program online
+
+#include <iostream>
+using namespace std;
+#include<vector>
+// #include <algorithm>
+int main()
+{
+   vector<int>v{5,6,3,21};
+   cout<<"Size="<<v.size()<<"\n";
+   for(auto p:v)
+   {
+       cout<<p<<"\t";
+   }
+   cout<<"\nAfter inserting Data \n";
+   v[2]=50;       //insertion indexing se
+   for(auto p:v)
+   {
+       cout<<p<<"\t";
+   }
+   
+   cout<<"\nCapicity="<<v.capacity();
+   v.push_back(9);   //insertion last se
+   cout<<"\nAfter push back Data\n";
+    for(auto p:v)
+   {
+       cout<<p<<"\t";
+   }
+   cout<<"\nAfter push back Capicity="<<v.capacity();
+   cout<<"\n Deletion\n";
+   v.pop_back();  //delete last se
+    for(auto p:v)
+   {
+       cout<<p<<"\t";
+   }
+}
+//===========================================static-vector==============================================================================
+// Online C++ compiler to run C++ program online
+
+#include <iostream>
+using namespace std;
+#include<vector>
+// #include <algorithm>
+int main()
+{
+   vector<int>v(5);
+   cout<<"Size="<<v.size(); //output=5
+   cout<<"\nData\n";        
+   for(auto p:v)
+   {
+       cout<<p<<"\t";   //output=0
+   }
+    vector<int>v1(5,10);  //insert 10
+   cout<<"Size="<<v.size();
+   cout<<"\nData\n";
+   for(auto p:v)
+   {
+       cout<<p<<"\t";   //output=10
+   }
+   cout<<"\nInserting value indexingvise\n";
+   v[1]=4;
+   v[4]=9;
+   v[3]=6;
+   for(auto p:v)
+   {
+       cout<<p<<"\t";   
+   }
+}//====================================dynamic vector and all function==============================================================================================
+//#insert
+//#erase
+//#find
+//reverse
+//*max_element
+//*min_element
+//#empty()or Not
+//#clear()
+
+
+#include <iostream>
+using namespace std;
+#include<vector>
+#include<iterator>
+#include <algorithm>
+int main()
+{
+   vector<int>v;
+   int n,b;
+   cout<<"How many values enter:";
+   cin>>n;
+   for(int i=1; i<=n; i++)
+   {
+       cout<<"Enter Value:";
+       cin>>b;
+       v.push_back(b);
+   }
+   for(auto p:v)
+   {
+       cout<<p<<"\t";
+   }
+   cout<<"\nAfter pop back\n";
+   v.pop_back();
+   for(auto p:v)
+   {
+       cout<<p<<"\t";
+   }
+   //========koi  bhi indexing se value insert karvana iske liye phle iterator set krna hot h
+   //===============begin se krna h to=========================================
+   vector<int>::iterator it=v.begin();
+   v.insert(it,9);
+   v.insert(it+1,12);
+   cout<<"\nAfter insert by indexing use of iterator first se\n";
+   for(auto p:v)
+   {
+       cout<<p<<"\t";
+   }
+    //=========================erase(delete) koi bii indexing se==========================================
+   cout<<"\nAfter delete begin se\n";
+   v.erase(it+2);
+   for(auto p:v)
+   {
+       cout<<p<<"\t";
+   }
+   //========================end se insert=============================
+   vector<int>::iterator itt=v.end();
+   v.insert(itt,14);
+   v.insert(itt-2,17);
+   cout<<"\nAfter insert by indexing use of iterator last se\n";
+   for(auto p:v)
+   {
+       cout<<p<<"\t";
+   }
+    //=========================erase(delete) koi bii indexing se==========================================
+   cout<<"\nAfter delete end se se\n";
+   v.erase(itt-2);
+   for(auto p:v)
+   {
+       cout<<p<<"\t";
+   }
+   //===use of FINd function value based search============================================================
+//   cout<<"\nSearch value\n";
+//   int x;
+//   cout<<"Enter search value:";
+//   cin>>x;
+//   auto j=find(v.begin(),v.end(),x);
+//   cout<<*j;
+// //   v.erase(j);
+//   for(auto p:v)
+//   {
+//       cout<<p<<"\t";
+//   }
+   cout<<"\nMaximum minimum find\n";
+   cout<<"Maximum="<<*max_element(v.begin(),v.end())<<"\n";
+   cout<<"Minimum="<<*min_element(v.begin(),v.end())<<"\n";
+   
+   cout<<"\nAfter reverse\n";
+   reverse(v.begin(),v.end());
+   for(auto p:v)
+   {
+       cout<<p<<"\t";
+   }
+   cout<<"\nCheck empty or not\n";
+   if(v.empty())
+   {
+       cout<<"Vector is empty\n";
+   }
+   else
+   {
+       cout<<"Vector is not empty\n";
+   }
+   v.clear();
+   if(v.empty())
+   {
+       cout<<"Vector is empty";
+   }
+}
+
+
+        
+       
+     
+
+    
+
+
+        
+       
+     
+
+    
+
+
+        
+       
+     
+
+    
 
 
         
