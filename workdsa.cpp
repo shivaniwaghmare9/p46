@@ -340,6 +340,71 @@ int main()
    }
 }
 
+// Online C++ compiler to run C++ program online
+//=====================================VECTOR(pair)=======================================================================================
+#include <iostream>
+using namespace std;
+#include <vector>
+#include <iterator>
+int main() {
+    
+    vector<pair<int,string>>v;
+    
+    int rollno,n;
+    string name;
+    
+    cout<<"How many data stored:";
+    cin>>n;
+    
+    for(int i=1;i<=n; i++)
+    {
+        cout<<"enter rollno:";
+        cin>>rollno;
+        cout<<"enter name:";
+        cin>>name;
+        v.push_back({rollno,name});
+    }
+    cout<<"\nstored value\n";
+    for(int i=0; i<v.size(); i++)
+    {
+        cout<<v[i].first<<":"<<v[i].second<<"\n";
+    }
+}
+
+// Online C++ compiler to run C++ program online
+//=====================================VECTOR(tupler)=======================================================================================
+#include <iostream>
+using namespace std;
+#include <vector>
+#include <tuple>
+int main() {
+    
+    vector<tuple<int,string,int>>v;
+    
+    int rollno,age,n;
+    string name;
+    
+    cout<<"How many data stored:";
+    cin>>n;
+    
+    for(int i=1;i<=n; i++)
+    {
+        cout<<"enter rollno:";
+        cin>>rollno;
+        cout<<"enter name:";
+        cin>>name;
+        cout<<"enter age:";
+        cin>>age;
+        v.push_back({rollno,name,age});
+    }
+    cout<<"\nstored value\n";
+    for(int i=0; i<v.size(); i++)
+    {
+        cout<<get<0>(v[i])<<":"<<get<1>(v[i])<<":"<<get<2>(v[i])<<"\n";
+    }
+   
+}
+
 
         
        
