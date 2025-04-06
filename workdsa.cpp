@@ -405,6 +405,46 @@ int main() {
    
 }
 
+// Online C++ compiler to run C++ program online
+//=====================================VECTOR(2dvector)=======================================================================================
+#include <iostream>
+using namespace std;
+#include <vector>
+
+int main() {
+    
+    vector<vector<int>>v;
+    
+    int row,col,v1;
+    
+    
+    cout<<"enter no of row:";
+    cin>>row;
+    cout<<"enter no of column:";
+    cin>>col;
+    
+    for(int i=1;i<=row; i++)
+    {
+        vector<int>v2;
+    for(int j=1; j<=col; j++)
+    {
+        cout<<"enter values\n";
+        cin>>v1;
+        v2.push_back(v1);
+    }
+    v.push_back(v2);
+    }
+    cout<<"\nstored values are\n";
+    for(int i=0; i<v.size();i++)
+    {
+        for(int j=0; j<v[i].size();j++)
+        {
+           cout<<v[i][j]<<"\t";
+        }
+        cout<<"\n";
+    }
+ }
+
 
         
        
