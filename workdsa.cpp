@@ -445,6 +445,83 @@ int main() {
     }
  }
 
+ // Online C++ compiler to run C++ program online
+//=====================================VECTOR(sum of two vectors)=======================================================================================
+#include <iostream>
+using namespace std;
+#include <vector>
+
+int main() {
+    int n;
+    cout<<"enter the size of vectors:";
+    cin>>n;
+    vector<int>v1(n);
+    vector<int>v2(n);
+    vector<int>sum(n);
+    for(int i=0; i<n; i++)
+    {
+        cout<<"enter the elemnt of v1:";
+        cin>>v1[i];
+    }
+    for(int i=0; i<n; i++)
+    {
+        cout<<"enter the elemnt of v2:";
+        cin>>v2[i];
+    }
+    for(int i=0; i<n; i++)
+    {
+        sum[i]=v1[i]+v2[i];
+    }
+    cout<<"\nAddition of vectors\n";
+    for(int i=0; i<n; i++)
+    {
+        cout<<sum[i]<<"\t";
+    }
+}
+
+// Online C++ compiler to run C++ program online
+//=====================================VECTOR(sum of two vectors)=======================================================================================
+#include <iostream>
+using namespace std;
+#include <vector>
+
+int main() 
+{
+    
+    int n;
+    cout<<"enter size of vectors:";
+    cin>>n;
+    vector<int>v1(n);
+    vector<int>v2(n);
+    vector<int>sum(n);
+    
+    for(int i=0; i<n; i++)
+    {
+        cout<<"enter value of v1:";
+        cin>>v1[i];
+    }
+    for(int i=0; i<n; i++)
+    {
+        cout<<"enter value of v2:";
+        cin>>v2[i];
+    }
+    for(int i=0; i<n; i++)
+    {
+        sum[i]=v1[i]+v2[i];
+    }
+    cout<<"\nAddition of two vectors\n";
+    for(int i=0; i<n; i++)
+    {
+        cout<<sum[i]<<"\t";
+    }
+ }
+    
+    
+    
+
+
+
+
 
         
        
