@@ -334,3 +334,95 @@ int main()
      
     
 }
+// Online C++ compiler to run C++ program online
+//=====================================SELF REFRENCIAL CLASS STRUCTURE(  defth of node)=================================================================================================================
+#include <iostream>
+using namespace std;
+class node
+{
+    public:int data;
+    node *left;
+    node *right;
+    node(int d)
+    {    
+        data=d;
+        left=NULL;
+        right=NULL;
+    }
+    
+    
+    int height(node *h)
+    {
+        if(h==NULL)
+        {
+            return 0;
+        }
+        int left=height(h->left);
+        int right=height(h->right);
+        int result=max(left,right)+1;
+        return result;
+    }
+};
+
+
+
+int main()
+{
+    node *root=new node(10);
+    root->left=new node(12);
+    root->right=new node(20);
+    root->left->left=new node(30);
+    root->right->left=new node(42);
+    root->left->left->left=new node(50);
+    root->left->left->left->right=new node(62);
+    cout<<root->height(root);
+    
+}
+
+// Online C++ compiler to run C++ program online
+//=====================================SELF REFRENCIAL CLASS STRUCTURE( leaf node of tree)=================================================================================================================
+#include <iostream>
+using namespace std;
+class node
+{
+    public:int data;
+    node *left;
+    node *right;
+    node(int d)
+    {    
+        data=d;
+        left=NULL;
+        right=NULL;
+    }
+    
+};
+void preorder(node *root,int &c)
+{
+    if(root==NULL)
+    {
+        return ;
+    }
+    preorder(root->left,c);
+    preorder(root->right,c);
+    if(root->left==NULL && root->right==NULL)
+    {
+        c++;
+    }
+}
+
+
+
+int main()
+{
+    int c=0;
+    node *root=new node(10);
+    root->left=new node(12);
+    root->right=new node(20);
+    root->left->left=new node(30);
+    root->right->left=new node(42);
+    root->left->left->left=new node(50);
+    root->left->left->left->right=new node(62);
+    preorder(root,c);
+    cout<<"Total leaf node are:"<<c<<"\n";
+    
+}
