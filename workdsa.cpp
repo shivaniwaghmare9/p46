@@ -372,7 +372,7 @@ int main() {
 }
 
 // Online C++ compiler to run C++ program online
-//=====================================VECTOR(tupler)=======================================================================================
+//=====================================VECTOR(tuple)=======================================================================================
 #include <iostream>
 using namespace std;
 #include <vector>
@@ -516,6 +516,148 @@ int main()
     }
  }
     
+ // Online C++ compiler to run C++ program online
+//=====================================VECTOR(sum of two vectors size is different)=======================================================================================
+#include <iostream>
+using namespace std;
+#include <vector>
+
+int main() 
+{
+    
+    int n1,n2;
+    cout<<"enter size of vectors n1:";
+    cin>>n1;
+    cout<<"enter size of vectors n2:";
+    cin>>n2;
+    vector<int>v1(n1);
+    vector<int>v2(n2);
+    vector<int>sum(max(n1,n2));
+    
+    for(int i=0; i<n1; i++)
+    {
+        cout<<"enter value of v1:";
+        cin>>v1[i];
+    }
+    for(int i=0; i<n2; i++)
+    {
+        cout<<"enter value of v2:";
+        cin>>v2[i];
+    }
+    for(int i=0; i<sum.size(); i++)
+    {
+        if(i<v1.size())
+        {
+            sum[i]+=v1[i];
+        }
+        if(i<v2.size())
+        {
+            sum[i]+=v2[i];
+        }
+    }
+    
+    cout<<"\nAddition of two vectors\n";
+    for(int i=0; i<sum.size(); i++)
+    {
+        cout<<sum[i]<<"\t";
+    }
+ }
+  
+ // Online C++ compiler to run C++ program online
+//=====================================VECTOR(sum of two vectors  and find highest value)=======================================================================================
+#include <iostream>
+using namespace std;
+#include <vector>
+
+int main() 
+{
+    
+    int n1,n2;
+    cout<<"enter size of vectors n1:";
+    cin>>n1;
+    cout<<"enter size of vectors n2:";
+    cin>>n2;
+    vector<int>v1(n1);
+    vector<int>v2(n2);
+   
+    
+    for(int i=0; i<n1; i++)
+    {
+        cout<<"enter value of v1:";
+        cin>>v1[i];
+    }
+    for(int i=0; i<n2; i++)
+    {
+        cout<<"enter value of v2:";
+        cin>>v2[i];
+    }
+    
+    int sumv1=0;
+    int sumv2=0;
+    for(int i=0; i<n1; i++)
+    {
+        sumv1+=v1[i];
+    }
+    cout<<"Sum of v1="<<sumv1<<"\n";
+    for(int i=0; i<n2; i++)
+    {
+        sumv2+=v2[i];
+    }
+    cout<<"Sum of v1="<<sumv2<<"\n";
+    cout<<"\nhighest value from vectors\n";
+    if(sumv1>sumv2)
+    {
+        cout<<"Maximum value of v1:"<<sumv1<<"\n";
+    }
+    else if(sumv2>sumv1)
+    {
+        cout<<"Maximum value of v2:"<<sumv2<<"\n";
+    }
+    else
+    {
+        cout<<"both are equal";
+    }
+ }
+    
+ // Online C++ compiler to run C++ program online
+//=====================================VECTOR(keep first occursion)=======================================================================================
+#include <iostream>
+using namespace std;
+#include <vector>
+#include <algorithm>
+int main() 
+{
+    vector<int>v{1,2,4,1,3,2,4,3,6};
+    sort(v.begin(),v.end());
+    int x=1;
+    for(int i=1; i<v.size(); i++)
+    {
+        if(v[x-1]!=v[i])
+        {
+            v[x]=v[i];
+            x++;
+        }
+    }
+    for(int i=0; i<x; i++)
+    {
+        cout<<v[i]<<"\t";
+    }
+    
+       
+ }
+    
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
     
     
 
