@@ -339,7 +339,116 @@ int main()
     string s="wellcomee";
     freq(s);
 }
-
+// Online C++ compiler to run C++ program online
+//=================================MAP(DYNAMIC MAP OREDERD MAP )====================================================
+#include <iostream>
+using namespace std;
+#include<map>
+int main()
+{
+    map<int,string>mp;
+    int roll,n;
+    string name;
+    cout<<"how many records enter:";
+    cin>>n;
+    for(int i=1; i<=n; i++)
+    {
+        cout<<"enter rollno:";
+        cin>>roll;
+        cout<<"enter name:";
+        cin>>name;
+        mp.insert({roll,name});
+    }
+    cout<<"\nRecords are\n";
+    for(auto p:mp)
+    {
+        cout<<p.first<<":"<<p.second<<"\n";
+    }
+    cout<<"\nSearching record\n";
+    cout<<"enter searching rollno:";
+    cin>>roll;
+    auto s=mp.find(roll);
+    if(s!=mp.end())
+    {
+        cout<<s->first<<":"<<s->second<<"\n";
+    }
+    else
+    {
+        cout<<"not found";
+    }
+    cout<<"\nAfetr deletion\n";
+    cout<<"enter delete roll no:";
+    cin>>roll;
+    auto d=mp.find(roll);
+    if(d!=mp.end())
+    {
+        mp.erase(roll);
+    }
+    else
+    {
+        cout<<"not found";
+    }
+    cout<<"\n";
+    for(auto p:mp)
+    {
+        cout<<p.first<<":"<<p.second<<"\n";
+    }
+}
+// Online C++ compiler to run C++ program online
+//=================================MAP(DYNAMIC MAP UNOREDERD MAP)====================================================
+#include <iostream>
+using namespace std;
+#include <unordered_map>
+int main()
+{
+   unordered_map<int,string>mp;
+   int roll,n;
+   string name;
+   cout<<"how many records enter:";
+   cin>>n;
+   for(int i=1; i<=n; i++)
+   {
+       cout<<"enter roll no:";
+       cin>>roll;
+       cout<<"enter name:";
+       cin>>name;
+       mp.insert({roll,name});
+   }
+   for(auto p:mp)
+   {
+       cout<<p.first<<":"<<p.second<<"\n";
+   }
+   cout<<"\nsearching\n";
+   cout<<"enter searching roll:";
+   cin>>roll;
+   auto s=mp.find(roll);
+   if(s!=mp.end())
+   {
+       cout<<s->first<<":"<<s->second<<"\n";
+   }
+   else
+   {
+       cout<<"not found";
+   }
+   cout<<"\nsearching for deletion\n";
+   cout<<"enter searching roll:";
+   cin>>roll;
+   auto d=mp.find(roll);
+   if(d!=mp.end())
+   {
+      mp.erase(roll);
+   }
+   else
+   {
+       cout<<"not found";
+   }
+   cout<<"\n";
+   for(auto p:mp)
+   {
+       cout<<p.first<<":"<<p.second<<"\n";
+   }
+   
+}
                
        
    
