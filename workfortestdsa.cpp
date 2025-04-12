@@ -1,0 +1,278 @@
+
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+#include <stack>
+bool pvalid(string s)
+{
+    stack<char>stk;
+    bool r=true;
+    for(int i=0; i<s.size(); i++)
+    {
+        if(s[i]=='{' || s[i]=='('|| s[i]=='[')
+        {
+            stk.push(s[i]);
+        }
+        else if(s[i]=='}')
+        {
+            if(!stk.empty() && stk.top()=='{')
+            {
+                stk.pop();
+            }
+            else
+            {
+                r=false;
+                break;
+            }
+        }
+        else if(s[i]==')')
+        {
+            if(!stk.empty() && stk.top()=='(')
+            {
+                stk.pop();
+            }
+            else
+            {
+                r=false;
+                break;
+            }
+        }
+        else if(s[i]==']')
+        {
+            if(!stk.empty() && stk.top()=='[')
+            {
+                stk.pop();
+            }
+            else
+            {
+                r=false;
+                break;
+            }
+        }
+    }
+    if(!stk.empty())
+    {
+        return false;
+    }
+    else
+    {
+        return r;
+    }
+    
+}
+int main() {
+    string s="{([)}";
+    if(pvalid(s))
+    {
+        cout<<"valid";
+    }
+    else
+    {
+        cout<<"invalid";
+    }
+    
+}
+// Online C++ compiler to run C++ program online
+//===============================================================PARANTHESESS(FOR STACK)=============================================================
+#include <iostream>
+using namespace std;
+#include <stack>
+bool pvalid(string s)
+{
+    stack<char>stk;
+    bool r=true;
+    for(int i=0; i<s.size(); i++)
+    {
+        if(s[i]=='{' || s[i]=='(' || s[i]=='[' )
+        {
+            stk.push(s[i]);
+        }
+        else if(s[i]=='}')
+        {
+            if(!stk.empty() && stk.top()=='{')
+            {
+                stk.pop();
+            }
+            else
+            {
+                r=false;
+                break;
+            }
+        }
+        else if(s[i]==')')
+        {
+            if(!stk.empty() && stk.top()=='(')
+            {
+                stk.pop();
+            }
+            else
+            {
+                r=false;
+                break;
+            }
+        }
+        else if(s[i]==']')
+        {
+            if(!stk.empty() && stk.top()=='[')
+            {
+                stk.pop();
+            }
+            else
+            {
+                r=false;
+                break;
+            }
+        }
+    }
+    if(!stk.empty())
+    {
+        return false;
+    }
+    else
+    {
+        return r;
+    }
+}
+int main()
+{
+    string s="{([])}";
+    if(pvalid(s))
+    {
+        cout<<"valid";
+    }
+    else
+    {
+        cout<<"invalid";
+    }
+}
+// Online C++ compiler to run C++ program online
+//=================================FORWARD LIST====================================================
+#include <iostream>
+using namespace std;
+#include <forward_list>
+int main()
+{
+    forward_list<int>f;
+    f.push_front(35);
+    f.push_front(46);
+    f.push_front(3);
+    f.push_front(35);
+    f.push_front(79);
+    f.push_front(7);
+    forward_list<int>f1;
+    f.push_front(6);
+    f.push_front(4);
+    f.push_front(3);
+    f.push_front(5);
+    f.push_front(7);
+    f.push_front(9);
+    cout<<"\nlist of f:";
+    for(auto p:f)
+    {
+        cout<<p<<"\t";
+    }
+    cout<<"\nlist after sort f:";
+    f.sort();
+    for(auto p:f)
+    {
+        cout<<p<<"\t";
+    }
+    cout<<"\nlist unique  f:";
+    f.unique();
+    for(auto p:f)
+    {
+        cout<<p<<"\t";
+    }
+    cout<<"\nlist of reverse  f:";
+    f.reverse ();
+    for(auto p:f)
+    {
+        cout<<p<<"\t";
+    }
+    
+    cout<<"\ndeletion data in list of f:";
+    f.pop_front();
+    for(auto p:f)
+    {
+        cout<<p<<"\t";
+    }
+    cout<<"\nDistance of forward list\n";
+    cout<<"Size="<<distance(f.begin(),f.end());
+    cout<<"\nAfter merge\n";
+    f.merge(f1);
+    for(auto p:f)
+    {
+        cout<<p<<"\t";
+    }
+    
+}
+// Online C++ compiler to run C++ program online
+//=================================DOUBLY LINKED LIST====================================================
+#include <iostream>
+using namespace std;
+#include <list>
+#include<algorithm>
+int main()
+{
+    list<int>f;
+    f.push_front(35);
+    f.push_back(46);
+    f.push_front(3);
+    f.push_front(35);
+    f.push_back(79);
+    f.push_front(7);
+   
+    cout<<"\nlist of f:";
+    for(auto p:f)
+    {
+        cout<<p<<"\t";
+    }
+    cout<<"\ndeletion data in list of f:";
+    f.pop_front();
+    for(auto p:f)
+    {
+        cout<<p<<"\t";
+    }
+    cout<<"\nDynamic insert deletion or updation\n";
+    cout<<"After inserting\n";
+    auto it1=f.end();
+    advance (it1,-2);
+    f.insert(it1,30);
+    for(auto p:f)
+    {
+        cout<<p<<"\t";
+    }
+    cout<<"\nAfter deletion\n";
+    auto it2=f.end();
+    advance (it2,-2);
+    f.erase(it2);
+    for(auto p:f)
+    {
+        cout<<p<<"\t";
+    }
+    cout<<"\nAfter updation\n";
+    auto it3=f.begin();
+    advance (it3,3);
+    *it3=50;
+    for(auto p:f)
+    {
+        cout<<p<<"\t";
+    }
+    cout<<"After searching\n";
+    auto s=find(f.begin(),f.end(),90);
+    if(s!=f.end())
+    {
+        cout<<" found="<<*s;
+        
+    }
+    else
+    {
+        cout<<"not found";
+    }
+    
+}
+
+
+               
+       
+   
