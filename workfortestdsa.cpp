@@ -271,7 +271,74 @@ int main()
     }
     
 }
+// Online C++ compiler to run C++ program online
+//=================================MAP(STATIC)====================================================
+#include <iostream>
+using namespace std;
+#include<map>
 
+int main()
+{
+    map<int,string>m;
+    m.insert({107,"pihu"});
+    m.insert({103,"preet"});
+    m.insert({105,"shivi"});
+    for(auto p:m)
+    {
+        cout<<p.first<<":"<<p.second<<"\n";
+    }
+    for(auto p=m.begin(); p!=m.end(); p++)
+    {
+        cout<<p->first<<":"<<p->second<<"\n";
+    }
+    cout<<"Size="<<m.size();
+}
+// Online C++ compiler to run C++ program online
+//=================================MAP(FREQUNCY)====================================================
+#include <iostream>
+using namespace std;
+#include<map>
+void freq(string s)
+{
+    map<char,int>mp;
+    for(int i=0; i<s.size(); i++)
+    {
+        mp[s[i]]++;
+    }
+    for(auto p:mp)
+    {
+        cout<<p.first<<":"<<p.second<<"\n";
+    }
+}
+
+int main()
+{
+    string s="acceptted";
+    freq(s);
+    
+}
+// Online C++ compiler to run C++ program online
+//=================================MAP(FREQUNCY)====================================================
+#include <iostream>
+using namespace std;
+#include<map>
+void freq(string s)
+{
+    map<char,int>f;
+    for(int i=0; i<s.size(); i++)
+    {
+        f[s[i]]++;
+    }
+    for(auto p:f)
+    {
+        cout<<p.first<<":"<<p.second<<"\n";
+    }
+}
+int main()
+{
+    string s="wellcomee";
+    freq(s);
+}
 
                
        
