@@ -791,3 +791,122 @@ int main()
      root->left->right->left=new node(4);
     cout<<root->height(root);
 }
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+class node{
+    public:int data;
+    node *left;
+    node *right;
+    node(int d)
+    {
+        data=d;
+        left=NULL;
+        right=NULL;
+    }
+    
+};
+void preorder(node *root,int &c)
+{
+    if(root==NULL)
+    {
+        return ;
+    }
+    preorder(root->left,c);
+    preorder(root->right,c);
+    if(root->left==NULL && root->right==NULL)
+    {
+        c++;
+    }
+}
+int main()
+{
+    int c=0;
+    node *root=new node(10);
+    root->left=new node(50);
+    root->right=new node(20);
+    root->left->left=new node(12);
+    root->left->right=new node(40);
+     root->left->right->left=new node(4);
+   preorder(root,c);
+   cout<<"\ntotal leaf node:"<<c;
+}
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+#include<stack>
+int main()
+{
+    stack<int>stk;
+    int n,v;
+    cout<<"how many values enter:";
+    cin>>n;
+    for(int i=1; i<=n; i++)
+    {
+        cout<<"enter value:";
+        cin>>v;
+        stk.push(v);
+    }
+    while(!stk.empty())
+    {
+        cout<<stk.top()<<"\t";
+        stk.pop();
+    }
+}
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+#include<vector>
+#include<algorithm>
+int main()
+{
+    vector<int>v={4,2,8,1,6,9};
+    sort(v.begin(),v.end(),less<int>());
+    for(auto p:v)
+    {
+        cout<<p<<"\t";
+    }
+    cout<<"\ndesending\n";
+    sort(v.begin(),v.end(),greater<int>());
+    for(auto p:v)
+    {
+        cout<<p<<"\t";
+    }
+    cout<<"\n";
+    sort(v.begin(),v.end(),[](int a,int b){return a>b;});
+    for(auto p:v)
+    {
+        cout<<p<<"\t";
+    }
+    cout<<"\n";
+    cout<<[](int a){return a+10;} (6)<<"\n";
+    cout<<[](int a,int b){return a>b;}(20,1)<<"\n";
+    auto k=[](int a) {return a*a;};
+    cout<<k(5);
+}   
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+#include<vector>
+#include<iterator>
+#include<algorithm>
+int main()
+{
+    vector<int>v{1,4,1,2,4,1,5,2};
+    sort(v.begin(),v.end());
+    int x=1;
+    for(int i=1; i<=v.size(); i++)
+    {
+        if(v[x-1]!=v[i])
+        {
+            v[x]=v[i];
+            x++;
+        }
+    }
+    for(int i=0; i<x; i++)
+    {
+        cout<<v[i]<<"\t";
+    }
+}
+
+
