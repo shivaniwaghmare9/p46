@@ -621,3 +621,173 @@ int main()
      cout<<"\npost order\n";
     postorder(root);
 }
+// Online C++ compiler to run C++ program online
+//=================================SELF REFERENCE TREE STRUCTURE================================================================================
+#include <iostream>
+using namespace std;
+class node
+{
+    public:int data;
+    node *left;
+    node *right;
+    public:node(int val)
+    {
+        data=val;
+        left=NULL;
+        right=NULL;
+    }
+};
+node *create(node *root)
+{
+    int d;
+    cout<<"enter value:";
+    cin>>d;
+    root=new node(d);
+    if(d==-1)
+    {
+        return NULL;
+    }
+    cout<<"enter value for left:"<<d<<"\n";
+    root->left=create(root->left);
+     cout<<"enter value for right:"<<d<<"\n";
+    root->right=create(root->right);
+    return root;
+    
+}
+void preorder(node *root)
+{
+    if(root==NULL)
+    {
+        return;
+        
+    }
+    cout<<root->data<<"\t";
+    preorder(root->left);
+    preorder(root->right);
+}
+void inorder(node *root)
+{
+    if(root==NULL)
+    {
+        return;
+        
+    }
+     
+    inorder(root->left);
+    cout<<root->data<<"\t";
+    inorder(root->right);
+}
+void postorder(node *root)
+{
+    if(root==NULL)
+    {
+        return;
+        
+    }
+     
+    postorder(root->left);
+    postorder(root->right);
+    cout<<root->data<<"\t";
+}
+int main()
+{
+    node *root=NULL;
+    root=create (root);
+    
+    cout<<"\npre order\n";
+    preorder(root);
+     cout<<"\nin order\n";
+    inorder(root);
+     cout<<"\npost order\n";
+    postorder(root);
+}
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+class node{
+    public:int data;
+    node *left;
+    node *right;
+    node(int d)
+    {
+        data=d;
+        left=NULL;
+        right=NULL;
+    }
+};
+node *create(node *root, int v)
+{
+    if (root==NULL)
+    {
+        return new node(v);
+        
+    }
+    if(v<root->data)
+    {
+        root->left=create(root->left,v);
+    }
+    else
+    {
+          root->right=create(root->right,v);
+    }
+    return root;
+}
+void inorder(node *root)
+{
+    if(root==NULL)
+    {
+        return ;
+    }
+    inorder(root->left);
+    cout<<root->data<<"\t";
+    inorder(root->right);
+}
+int main() {
+   node *root=NULL;
+   int n,val;
+   cout<<"How many values enter:";
+   cin>>n;
+   for(int i=1; i<=n; i++)
+   {
+       cout<<"enter value:";
+       cin>>val;
+       root=create(root,val);
+   }
+   cout<<"\ninorder data\n";
+   inorder(root);
+}
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+class node{
+    public:int data;
+    node *left;
+    node *right;
+    node(int d)
+    {
+        data=d;
+        left=NULL;
+        right=NULL;
+    }
+    int height(node *h)
+    {
+        if(h==NULL)
+        {
+            return 0;
+        }
+        int left=height(h->left);
+        int right=height(h->right);
+        int result=max(left,right)+1;
+        return result;
+    }
+};
+int main()
+{
+    node *root=new node(10);
+    root->left=new node(50);
+    root->right=new node(20);
+    root->left->left=new node(12);
+    root->left->right=new node(40);
+     root->left->right->left=new node(4);
+    cout<<root->height(root);
+}
