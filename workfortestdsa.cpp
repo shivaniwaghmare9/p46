@@ -504,8 +504,120 @@ int main()
 {
     string s="XII";
     cout<<roman(s);
-}
 
-               
        
-   
+}
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+#include<unordered_map>
+int roman(string s)
+{
+    unordered_map<char,int>rm{{'I',1},{'V',5},{'X',10}};
+    int r=0;
+    for(int i=0; i<s.size(); i++)
+    {
+        if(rm[s[i]]<rm[s[i+1]])
+        {
+            r=r-rm[s[i]];
+        }
+        else
+        {
+            r=r+rm[s[i]];
+        }
+    }
+    return r;
+}
+int main() {
+   string s="XI";
+   cout<<roman(s);
+}
+// Online C++ compiler to run C++ program online
+//=================================SELF REFERENCE TREE STRUCTURE================================================================================
+#include <iostream>
+using namespace std;
+class node
+{
+    public:int data;
+    node *left;
+    node *right;
+    public:node(int d)
+    {
+        data=d;
+        left=NULL;
+        right=NULL;
+    }
+};
+int main()
+{
+    node *root=new node(10);
+    root->left=new node(20);
+    root->right=new node(30);
+    cout<<"\npre order\n";
+    cout<<root->data<<"\n";
+    cout<<root->left->data<<"\n";
+    cout<<root->right->data<<"\n";
+}
+// Online C++ compiler to run C++ program online
+//=================================SELF REFERENCE TREE STRUCTURE================================================================================
+#include <iostream>
+using namespace std;
+class node
+{
+    public:int data;
+    node *left;
+    node *right;
+    public:node(int d)
+    {
+        data=d;
+        left=NULL;
+        right=NULL;
+    }
+};
+void preorder(node *root)
+{
+    if(root==NULL)
+    {
+        return;
+        
+    }
+    cout<<root->data<<"\t";
+    preorder(root->left);
+    preorder(root->right);
+}
+void inorder(node *root)
+{
+    if(root==NULL)
+    {
+        return;
+        
+    }
+     
+    inorder(root->left);
+    cout<<root->data<<"\t";
+    inorder(root->right);
+}
+void postorder(node *root)
+{
+    if(root==NULL)
+    {
+        return;
+        
+    }
+     
+    postorder(root->left);
+    postorder(root->right);
+    cout<<root->data<<"\t";
+}
+int main()
+{
+    node *root=new node(10);
+    root->left=new node(20);
+    root->right=new node(30);
+    cout<<"\npre order\n";
+    preorder(root);
+     cout<<"\nin order\n";
+    inorder(root);
+     cout<<"\npost order\n";
+    postorder(root);
+}
