@@ -105,3 +105,40 @@ int main()
      obj.show();
      coutnew.show();
 }
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+#include<array>
+#include<algorithm>
+int main()
+{
+    array<int,6>arr{1,3,5,2,6,7};
+    array<int,6>arr1{5,4,3,2,1};
+    for(auto p:arr)
+    {
+        cout<<p<<"\t";
+    }
+    cout<<"\nfront value="<<arr.front();
+    cout<<"\nback value="<<arr.back();
+    cout<<"\nAfter sorting\n";
+    sort(arr.begin(),arr.end());
+    for(auto p:arr)
+    {
+        cout<<p<<"\t";
+    }
+    cout<<"\nsize="<<arr.size()<<"\n";
+    cout<<" second highest value="<<arr[4];
+    cout<<"\nAfter swapping arr\n";
+    arr.swap(arr1);
+     for(auto p:arr)
+    {
+        cout<<p<<"\t";
+    }
+    cout<<"\nAfter swapping arr1\n";
+    for(auto f:arr1)
+    {
+        cout<<f<<"\t";
+    }
+    
+}
+   
